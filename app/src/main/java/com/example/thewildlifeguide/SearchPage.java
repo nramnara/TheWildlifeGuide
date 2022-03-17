@@ -1,4 +1,4 @@
-package com.example.eecs1022project_thewildlifeguide;
+package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.sql.Array;
 import java.util.ArrayList;
 
 public class SearchPage extends AppCompatActivity {
@@ -19,7 +18,7 @@ public class SearchPage extends AppCompatActivity {
     private Button imageSearchButton;
 
     //initialize animal list
-    private ArrayList<animal> animalsList;
+    private ArrayList<Animal> animalsList;
 
     //initialize the search page recycler view and listener
     private RecyclerView recyclerView;
@@ -75,9 +74,9 @@ public class SearchPage extends AppCompatActivity {
 
     //populate the animals list (replaceable before final submission)
     private void setAnimalInfo() {
-        animalsList.add(new animal("Panda"));
-        animalsList.add(new animal("Tiger"));
-        animalsList.add(new animal("Snake"));
+        animalsList.add(new Animal("Panda"));
+        animalsList.add(new Animal("Tiger"));
+        animalsList.add(new Animal("Snake"));
     }
 
     //take the user to the image search activity

@@ -1,4 +1,4 @@
-package com.example.eecs1022project_thewildlifeguide;
+package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 

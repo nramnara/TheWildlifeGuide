@@ -1,0 +1,21 @@
+Name
+Cat
+#####
+Species
+Mammal
+#####
+Physical Characteristics
+House cats are small but wild cats can be large
+Often fluffy
+Cats can have long tails
+Cats have whiskers
+#####
+Habitat
+Cats are often inside animals aside from larger ones and strays
+Cats do their own thing so they live wherever
+#####
+Diet
+Cats can eat meat
+Cats might eat plants
+#####
+$$$$$END$$$$$

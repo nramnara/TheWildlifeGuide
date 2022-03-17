@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheWildlifeGuide">
         <activity
+            android:name=".InfoPage"
+            android:exported="false" />
+        <activity
+            android:name=".ImageSearchPage"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsPage"
+            android:exported="false" />
+        <activity
+            android:name=".SearchPage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

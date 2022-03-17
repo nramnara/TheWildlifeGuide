@@ -1,0 +1,21 @@
+Name
+Dog
+#####
+Species
+Mammal
+#####
+Physical Characteristics
+Dogs come in various sizes, colours, etc...
+Dogs can be fluffy
+Dogs have tails
+#####
+Habitat
+Dogs can located in...
+Dogs can be wild or domesticated
+#####
+Diet
+Dogs eat meat...
+Dogs can eat plants...
+Who knows what they might eat
+#####
+$$$$$END$$$$$
