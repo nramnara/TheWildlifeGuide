@@ -1,0 +1,17 @@
+Name
+Octopus
+#####
+Species
+Mollusk(invertebrate)
+#####
+Physical Characteristics
+The typical octopus has a saccular body: the head is only slightly demarcated from the body and has large, complex eyes and eight contractile arms. Each arm bears two rows of fleshy suckers that are capable of great holding power. The arms are joined at their bases by a web of tissue known as the skirt, at the centre of which lies the mouth. The latter organ has a pair of sharp, horny beaks and a filelike organ, the radula, for drilling shells and rasping away flesh.
+#####
+Habitat
+All octopus live in water bodies mainly ocean 
+#####
+Diet
+Octopuses feed mainly upon crabs and lobsters, although some are plankton feeders, and they are fed upon by a number of marine fishes.
+#####
+$$$$$END$$$$$
+

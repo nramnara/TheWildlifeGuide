@@ -1,0 +1,17 @@
+Name
+Frog
+#####
+Species
+Amphibians
+#####
+Physical Characteristics
+In general, frogs have protruding eyes, no tail, and strong, webbed hind feet that are adapted for leaping and swimming. They also possess smooth, moist skins.
+#####
+Habitat
+Many are predominantly aquatic, but some live on land, in burrows, or in trees.
+#####
+Diet
+Most frogs eat insects, other small arthropods, or worms, but a number of them also eat other frogs, rodents, and reptiles.
+#####
+$$$$$END$$$$$
+

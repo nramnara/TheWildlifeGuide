@@ -1,0 +1,17 @@
+Name
+Eagle
+#####
+Species
+birds
+#####
+Physical Characteristics
+heavy-beaked, big-footed birds of prey belonging to the family Accipitridae (order Accipitriformes).
+#####
+Habitat
+Eagles are often residing in the highest trees of the forest
+#####
+Diet
+Eagles mostly eat meat their main prey is fish 
+#####
+$$$$$END$$$$$
+

@@ -1,0 +1,17 @@
+Name
+Gold fish
+#####
+Species
+Fish
+#####
+Physical Characteristics
+The goldfish is naturally greenish-brown or gray. The species, however, is variable, and numerous abnormalities occur. A deviant fish may be black, spotted, golden, white, or white with silver; it may have a trilobed tail fin or protruding eyes; or it may lack the normally long dorsal fin.
+#####
+Habitat
+Escaping from park and garden pools, the goldfish has become naturalized in many areas of the eastern United States.
+#####
+Diet
+The goldfish is omnivorous, feeding on plants and small animals. In captivity it does well on small crustaceans, and the diet may be supplemented with chopped mosquito larvae, cereal, and other foods.
+#####
+$$$$$END$$$$$
+

@@ -1,0 +1,17 @@
+Name
+Lion
+#####
+Species
+mammals
+#####
+Physical Characteristics
+The lion is a well-muscled cat with a long body, large head, and short legs. Size and appearance vary considerably between the sexes.
+#####
+Habitat
+Lions live in a variety of habitats but prefer grassland, savanna, dense scrub, and open woodland.
+#####
+Diet
+Lions are carnivores 
+#####
+$$$$$END$$$$$
+
