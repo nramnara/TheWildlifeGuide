@@ -1,0 +1,18 @@
+Name
+Seal
+#####
+Species
+Mammals 
+#####
+Physical Characteristics
+round at the middle and tapered at the ends, is adapted to swift and graceful swimming. There are two types of seals: the earless, or true, seals (family Phocidae); and the eared seals (family Otariidae), which comprise the sea lions and fur seals. In addition to the presence of external ears, eared seals have longer flippers than do earless seals. Also, the fur of eared seals is more apparent, especially in sea lions.
+
+#####
+Habitat
+They are abundant in polar seas, seals are found throughout the world, with some species favouring the open ocean and others inhabiting coastal waters or spending time on islands, shores, or ice floes. The coastal species are generally sedentary, but the oceangoing species make extended, regular migrations.
+#####
+Diet
+Seals are carnivores, eating mainly fish, though some also consume squid, other mollusks, and crustaceans. Unlike other seals, the leopard seal (Hydrurga leptonyx) of the Antarctic feeds largely on penguins, seabirds, and other seals, in addition to fish and krill.
+#####
+$$$$$END$$$$$
+
