@@ -17,6 +17,18 @@ public class SettingsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_page);
 
+        //-------------------------------------
+
+        /* Hides the bar at the top of phone */
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        /* Hides ActionBar at the top of the app */
+        getSupportActionBar().hide();
+
+        //-------------------------------------
+
+
         //set value to backButton
         backButton = (Button) findViewById(R.id.settingsBack_button);
 

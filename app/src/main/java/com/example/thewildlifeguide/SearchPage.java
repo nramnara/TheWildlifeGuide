@@ -14,11 +14,12 @@ import java.util.ArrayList;
 
 public class SearchPage extends AppCompatActivity {
 
-    //initiailze the image search button
+    //initialize the image search button
     private Button imageSearchButton;
 
     //initialize animal list
-    private ArrayList<Animal> animalsList;
+    private AnimalList list;
+    private ArrayList<String> animalList;
 
     //initialize the search page recycler view and listener
     private RecyclerView recyclerView;
@@ -31,6 +32,18 @@ public class SearchPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_page);
 
+        //-------------------------------------
+
+        /* Hides the bar at the top of phone */
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        /* Hides ActionBar at the top of the app */
+        getSupportActionBar().hide();
+
+        //-------------------------------------
+
+
         //set value to imageSearchButton
         imageSearchButton = (Button) findViewById(R.id.searchpageImageSearch_button);
 
@@ -38,9 +51,10 @@ public class SearchPage extends AppCompatActivity {
         recyclerView = findViewById(R.id.searchPage_recyclerView);
 
         //set the array to animalsList
-        animalsList = new ArrayList<>();
+        list = new AnimalList(this);
+        animalList = list.getListOfAnimals();
 
-        //what to do when the imageSearchbutton is clicked
+        //what to do when the imageSearchButton is clicked
         imageSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,13 +62,12 @@ public class SearchPage extends AppCompatActivity {
             }
         });
 
-        setAnimalInfo();
         setSearchPageAdapter();
     }
 
     private void setSearchPageAdapter() {
         setOnClickListener();
-        SearchPage_recyclerAdapter adapter = new SearchPage_recyclerAdapter(animalsList,listener);
+        SearchPage_recyclerAdapter adapter = new SearchPage_recyclerAdapter(this.animalList,listener);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -66,17 +79,10 @@ public class SearchPage extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
                 Intent intent = new Intent(getApplicationContext(),InfoPage.class);
-                intent.putExtra("animalName",animalsList.get(position).getAnimalName());
+                intent.putExtra("animalName",animalList.get(position));
                 startActivity(intent);
             }
         };
-    }
-
-    //populate the animals list (replaceable before final submission)
-    private void setAnimalInfo() {
-        animalsList.add(new Animal("Panda"));
-        animalsList.add(new Animal("Tiger"));
-        animalsList.add(new Animal("Snake"));
     }
 
     //take the user to the image search activity

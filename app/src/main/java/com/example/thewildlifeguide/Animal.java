@@ -36,6 +36,10 @@ public class Animal {
     
     
     public String getAnimalHabitat() {
+        return this.habitat;
+    }
+
+    public String getAnimalDiet() {
         return this.diet;
     }
     
@@ -48,7 +52,11 @@ public class Animal {
         this.animalName = animalName;
     }
 
-    //---------------------------------------------
+    public String getName() {
+        return this.name;
+    }
+
+    //---------------------------------------------r
 
 
     /*
@@ -65,7 +73,7 @@ public class Animal {
      Parses the text file using a BufferedReader, and stores each section in a String.
      */
     private void parseText(String path) {
-        File animal = new File(path);
+        File animal = new File(path + ".txt");
 
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(this.context.getAssets().open(String.valueOf(animal))));

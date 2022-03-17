@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
 public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_recyclerAdapter.MyViewHolder>{
 
-    private ArrayList<Animal> animalsList;
+    private ArrayList<String> animalList;
     private searchpage_RecyclerViewClickListener listener;
 
-    public SearchPage_recyclerAdapter (ArrayList<Animal> animalsList, searchpage_RecyclerViewClickListener listener) {
-        this.animalsList = animalsList;
+    public SearchPage_recyclerAdapter (ArrayList<String> animalList, searchpage_RecyclerViewClickListener listener) {
+        this.animalList = animalList;
         this.listener = listener;
     }
 
@@ -43,13 +43,13 @@ public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_
 
     @Override
     public void onBindViewHolder(@NonNull SearchPage_recyclerAdapter.MyViewHolder holder, int position) {
-        String animalName = animalsList.get(position).getAnimalName();
+        String animalName = animalList.get(position).toUpperCase();
         holder.animalnameTxt.setText(animalName);
     }
 
     @Override
     public int getItemCount() {
-        return animalsList.size();
+        return animalList.size();
     }
 
     public interface searchpage_RecyclerViewClickListener {
