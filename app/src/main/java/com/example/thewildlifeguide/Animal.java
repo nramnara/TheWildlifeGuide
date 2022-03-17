@@ -28,6 +28,23 @@ public class Animal {
     public String getAnimalName() {
         return this.animalName;
     }
+    
+    
+    public String getAnimalSpecies() {
+        return this.species;
+    }
+    
+    
+    public String getAnimalHabitat() {
+        return this.diet;
+    }
+    
+    
+    public String getPhysChars() {
+        return this.physicalCharacteristics;
+    }
+    
+    }
 
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
