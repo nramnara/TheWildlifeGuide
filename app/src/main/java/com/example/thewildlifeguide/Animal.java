@@ -43,8 +43,6 @@ public class Animal {
     public String getPhysChars() {
         return this.physicalCharacteristics;
     }
-    
-    }
 
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
