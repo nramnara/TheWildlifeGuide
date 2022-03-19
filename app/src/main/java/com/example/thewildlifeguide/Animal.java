@@ -17,48 +17,6 @@ public class Animal {
     private String physicalCharacteristics = "";
 
 
-    //---------------------------------------------
-
-    private String animalName;
-
-    public Animal(String animalName) {
-        this.animalName = animalName;
-    }
-
-    public String getAnimalName() {
-        return this.animalName;
-    }
-    
-    
-    public String getAnimalSpecies() {
-        return this.species;
-    }
-    
-    
-    public String getAnimalHabitat() {
-        return this.habitat;
-    }
-
-    public String getAnimalDiet() {
-        return this.diet;
-    }
-    
-    
-    public String getPhysChars() {
-        return this.physicalCharacteristics;
-    }
-
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    //---------------------------------------------r
-
-
     /*
     Constructor. Calls parseText(String) method to move text from the document
     into the correct Strings.
@@ -66,7 +24,6 @@ public class Animal {
     public Animal(Context context, String path) {
         this.context = context;
         parseText(path);
-        //printTraits();
     }
 
     /*
@@ -121,6 +78,31 @@ public class Animal {
             System.out.println(e);
         }
     }
+
+
+    //---------------------------------------------
+    //Getter methods
+
+    public String getAnimalSpecies() {
+        return this.species;
+    }
+
+    public String getAnimalHabitat() {
+        return this.habitat;
+    }
+
+    public String getAnimalDiet() {
+        return this.diet;
+    }
+
+    public String getPhysChars() {
+        return this.physicalCharacteristics;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
 
     /*
     Prints the Animal to console.

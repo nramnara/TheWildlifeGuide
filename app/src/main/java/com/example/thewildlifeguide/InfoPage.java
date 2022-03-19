@@ -19,17 +19,8 @@ public class InfoPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_page);
 
-        //-------------------------------------
-
-        /* Hides the bar at the top of phone */
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         /* Hides ActionBar at the top of the app */
         getSupportActionBar().hide();
-
-        //-------------------------------------
-
 
         settingsButton = (Button) findViewById(R.id.infopageSettings_button);
         backButton = (Button) findViewById(R.id.infopageBack_button);
@@ -58,7 +49,7 @@ public class InfoPage extends AppCompatActivity {
         TextView animalDietText = findViewById(R.id.animalinfo3TextView);
         TextView animalPhysCharsText = findViewById(R.id.animalinfo4TextView);
 
-        String path = "";
+        String path;
 
         Bundle extras = getIntent().getExtras();
         if (extras != null){

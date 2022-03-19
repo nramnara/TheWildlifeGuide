@@ -34,6 +34,7 @@ public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_
             listener.onClick(view,getAdapterPosition());
         }
     }
+
     @NonNull
     @Override
     public SearchPage_recyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,6 +46,7 @@ public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_
     public void onBindViewHolder(@NonNull SearchPage_recyclerAdapter.MyViewHolder holder, int position) {
         String animalName = animalList.get(position).toUpperCase();
         holder.animalnameTxt.setText(animalName);
+        holder.animalnameTxt.setTextSize(12);
     }
 
     @Override
