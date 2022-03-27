@@ -1,16 +1,28 @@
 package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class ImageSearchPage extends AppCompatActivity {
 
     //initialize image search buttons
     private Button textSearchButton;
+
+    //initialize animal list
+    private AnimalList list;
+    private ArrayList<String> animalList;
+
+    //initialize the search page recycler view and listener
+    private RecyclerView recyclerView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +43,13 @@ public class ImageSearchPage extends AppCompatActivity {
 
         //set value to text search button
         textSearchButton = (Button) findViewById(R.id.textsearchButton);
+
+        //set value to recyclerView
+        recyclerView = findViewById(R.id.searchPage_recyclerView);
+
+        //set the array to animalsList
+        list = new AnimalList(this);
+        animalList = list.getListOfAnimals();
 
         //what to do when text search button is clicked
         textSearchButton.setOnClickListener(new View.OnClickListener() {

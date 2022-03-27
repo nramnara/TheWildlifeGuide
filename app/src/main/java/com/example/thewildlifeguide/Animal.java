@@ -1,11 +1,14 @@
 package com.example.thewildlifeguide;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Locale;
 
 public class Animal {
 
@@ -16,6 +19,8 @@ public class Animal {
     private String diet = "";
     private String physicalCharacteristics = "";
 
+    private Drawable image;
+
 
     /*
     Constructor. Calls parseText(String) method to move text from the document
@@ -24,6 +29,7 @@ public class Animal {
     public Animal(Context context, String path) {
         this.context = context;
         parseText(path);
+        setImage();
     }
 
     /*
@@ -79,6 +85,21 @@ public class Animal {
         }
     }
 
+    /*
+     Stores the image of the animal in a Drawable, the image files are of type jpg and located in
+     the .../src/res/drawable folder.
+
+     The image is accessed by getting the resourceID of the image(using the name of the animal to
+     find it), and using that resourceID to identify the drawable.
+     */
+    private void setImage() {
+
+        Resources resources = context.getResources();
+        final int resourceId = resources.getIdentifier(this.name.toLowerCase(Locale.ROOT), "drawable",
+                context.getPackageName());
+        this.image = resources.getDrawable(resourceId);
+    }
+
 
     //---------------------------------------------
     //Getter methods
@@ -103,10 +124,13 @@ public class Animal {
         return this.name;
     }
 
+    public Drawable getImage() {
+        return this.image;
+    }
 
     /*
-    Prints the Animal to console.
-     */
+        Prints the Animal to console.
+         */
     public void printTraits() {
         System.out.println("Name: " + this.name);
         System.out.println("Species: " + this.species);

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class InfoPage extends AppCompatActivity {
@@ -43,11 +44,22 @@ public class InfoPage extends AppCompatActivity {
     }
 
     public void populatePage() {
+
+        TextView headerHabitat = findViewById(R.id.sectionHeader1);
+        TextView headerDiet = findViewById(R.id.sectionHeader2);
+        TextView headerPhysicalChars = findViewById(R.id.sectionHeader3);
+
+        headerHabitat.setText("Habitat");
+        headerDiet.setText("Diet");
+        headerPhysicalChars.setText("Physical Characteristics");
+
         TextView animalNameText = findViewById(R.id.animalnameTextView);
         TextView animalSpeciesText = findViewById(R.id.animalinfo1TextView);
         TextView animalHabitatText = findViewById(R.id.animalinfo2TextView);
         TextView animalDietText = findViewById(R.id.animalinfo3TextView);
         TextView animalPhysCharsText = findViewById(R.id.animalinfo4TextView);
+
+        ImageView animalImage = findViewById(R.id.animalImageView);
 
         String path;
 
@@ -62,6 +74,9 @@ public class InfoPage extends AppCompatActivity {
         animalHabitatText.setText(currentAnimal.getAnimalHabitat());
         animalDietText.setText(currentAnimal.getAnimalDiet());
         animalPhysCharsText.setText(currentAnimal.getPhysChars());
+
+        animalImage.setImageDrawable(currentAnimal.getImage());
+
     }
 
     public void openSettingsPage(){
