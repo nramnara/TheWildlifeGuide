@@ -54,10 +54,14 @@ public class InfoPage extends AppCompatActivity {
         headerPhysicalChars.setText("Physical Characteristics");
 
         TextView animalNameText = findViewById(R.id.animalnameTextView);
+        TextView animalVertInvertText = findViewById(R.id.animalinfo7TextView);
         TextView animalSpeciesText = findViewById(R.id.animalinfo1TextView);
+        TextView animalBloodedText = findViewById(R.id.animalinfo8TextView);
         TextView animalHabitatText = findViewById(R.id.animalinfo2TextView);
         TextView animalDietText = findViewById(R.id.animalinfo3TextView);
         TextView animalPhysCharsText = findViewById(R.id.animalinfo4TextView);
+        TextView animalKnownForText = findViewById(R.id.animalinfo5TextView);
+        TextView animalIUCNCategoryText = findViewById(R.id.animalinfo6TextView);
 
         ImageView animalImage = findViewById(R.id.animalImageView);
 
@@ -69,11 +73,15 @@ public class InfoPage extends AppCompatActivity {
             currentAnimal = new Animal(this, path);
         }
 
-        animalNameText.setText(currentAnimal.getName());
+       animalNameText.setText(currentAnimal.getName());
+        animalVertInvertText.setText(currentAnimal.getVertInvert());
         animalSpeciesText.setText(currentAnimal.getAnimalSpecies());
+        animalBloodedText.setText(currentAnimal.getBlooded());
         animalHabitatText.setText(currentAnimal.getAnimalHabitat());
         animalDietText.setText(currentAnimal.getAnimalDiet());
         animalPhysCharsText.setText(currentAnimal.getPhysChars());
+        animalKnownForText.setText(currentAnimal.getKnownFor());
+        animalIUCNCategoryText.setText(currentAnimal.getIUCNCategory());
 
         animalImage.setImageDrawable(currentAnimal.getImage());
 
