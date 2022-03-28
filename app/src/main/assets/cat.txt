@@ -1,21 +1,33 @@
 Name
 Cat
 #####
+Vert Invert
+Vertebrate
+#####
 Species
 Mammal
 #####
-Physical Characteristics
-House cats are small but wild cats can be large
-Often fluffy
-Cats can have long tails
-Cats have whiskers
-#####
+Blooded
+Warm-blooded
+##### 
 Habitat
-Cats are often inside animals aside from larger ones and strays
-Cats do their own thing so they live wherever
+Cats are terrestial.
+Aside from larger ones and strays, they are often inside animals.
+Feral cats usually move in groups and live in territory where food 
+and shelter are available, like a restaurant dumpster or beneath a porch. 
 #####
 Diet
-Cats can eat meat
-Cats might eat plants
+Cats mostly eat meat.
+Some cats might also eat plants
+#####
+Physical Characteristics
+House cats are small but wild cats can be larger. 
+They are covered in fur, have long tails, whiskers, and claws.
+#####
+Known For
+Cats are one of the most popular household pets in the world.
+#####
+IUCN Category
+LC - Least Concern
 #####
 $$$$$END$$$$$

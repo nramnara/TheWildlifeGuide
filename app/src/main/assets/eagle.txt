@@ -1,17 +1,31 @@
 Name
 Eagle
 #####
+Vert Invert
+Vertebrate
+#####
 Species
-birds
+Bird
 #####
-Physical Characteristics
-heavy-beaked, big-footed birds of prey belonging to the family Accipitridae (order Accipitriformes).
-#####
+Blooded
+Warm-blooded
+##### 
 Habitat
-Eagles are often residing in the highest trees of the forest
+They are terrestial animals, and can reach almost anywhere as they are strong birds. 
+They often reside and build their nests in the highest trees of the forest, or sometimes on cliffs. 
 #####
 Diet
-Eagles mostly eat meat their main prey is fish 
+Eagles are carnivorous predators.
+They mostly eat meat, but their main prey are fishes.    
+#####
+Physical Characteristics
+They are heavy-beaked, big-footed birds of prey belonging to the family Accipitridae (order Accipitriformes).
+Most of tehm have sharp talons. 
+#####
+Known For
+Eagles are famous for the high heights and speeds they reach when soaring. 
+#####
+IUCN Category
+LC - Least Concern
 #####
 $$$$$END$$$$$
-

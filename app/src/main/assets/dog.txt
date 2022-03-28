@@ -1,21 +1,30 @@
 Name
 Dog
 #####
+Vert Invert
+Vertebrate
+#####
 Species
 Mammal
 #####
-Physical Characteristics
-Dogs come in various sizes, colours, etc...
-Dogs can be fluffy
-Dogs have tails
-#####
+Blooded
+Warm-blooded
+##### 
 Habitat
-Dogs can located in...
-Dogs can be wild or domesticated
+As terrestial animals, dogs live in all kinds of habitats. 
+They range from prairires and deserts to rain forests to the arctic region. 
 #####
 Diet
-Dogs eat meat...
-Dogs can eat plants...
-Who knows what they might eat
+Meat makes up the majority of dogs' diet. 
+However, they also can and do eat plants.   
+#####
+Physical Characteristics
+Although it differs, in general, dogs have four legs and acute senses. 
+#####
+Known For
+Dogs are popular pets, and some are even trained to help humans do certain kinds of work.
+#####
+IUCN Category
+LC - Least Concern
 #####
 $$$$$END$$$$$
