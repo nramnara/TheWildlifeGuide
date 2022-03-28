@@ -14,18 +14,22 @@ public class Animal {
 
     private Context context;
     private String name = "";
+    private String vertInvert = "";
     private String species = "";
+    private String blooded = "";
     private String habitat = "";
     private String diet = "";
     private String physicalCharacteristics = "";
+    private String knownFor = "";
+    private String IUCN = "";
 
     private Drawable image;
 
 
     /*
-    Constructor. Calls parseText(String) method to move text from the document
-    into the correct Strings.
-     */
+   Constructor. Calls parseText(String) method to move text from the document
+   into the correct Strings.
+    */
     public Animal(Context context, String path) {
         this.context = context;
         parseText(path);
@@ -49,9 +53,21 @@ public class Animal {
                     text = reader.readLine();
                     this.name = text;
 
+                } else if (text.equals("Vert Invert")) {
+                    text = reader.readLine();
+                    this.vertInvert = text;
+
                 } else if (text.equals("Species")) {
                     text = reader.readLine();
                     this.species = text;
+
+                } else if (text.equals("Blooded")) {
+                    text = reader.readLine();
+                    this.blooded = text;
+
+                } else if (text.equals("Known For")) {
+                    text = reader.readLine();
+                    this.knownFor = text;
 
                 } else if (text.equals("Physical Characteristics")) {
                     text = reader.readLine();
@@ -77,6 +93,14 @@ public class Animal {
                         text = reader.readLine();
                     }
                     this.diet = this.diet.substring(0, this.diet.length() - 1);
+
+                } else if (text.equals("IUCN Category")) {
+                    text = reader.readLine();
+                    while (!text.equals("#####")) {
+                        this.IUCN += text + " ";
+                        text = reader.readLine();
+                    }
+                    this.IUCN = this.IUCN.substring(0, this.IUCN.length() - 1);
                 }
             }
 
@@ -88,7 +112,6 @@ public class Animal {
     /*
      Stores the image of the animal in a Drawable, the image files are of type jpg and located in
      the .../src/res/drawable folder.
-
      The image is accessed by getting the resourceID of the image(using the name of the animal to
      find it), and using that resourceID to identify the drawable.
      */
@@ -104,9 +127,19 @@ public class Animal {
     //---------------------------------------------
     //Getter methods
 
+    public String getName() {
+        return this.name;
+    }
+
+    public String getVertInvert() {
+        return this.vertInvert;
+    }
+
     public String getAnimalSpecies() {
         return this.species;
     }
+
+    public String getBlooded() { return this.blooded; }
 
     public String getAnimalHabitat() {
         return this.habitat;
@@ -120,8 +153,12 @@ public class Animal {
         return this.physicalCharacteristics;
     }
 
-    public String getName() {
-        return this.name;
+    public String getKnownFor() {
+        return this.knownFor;
+    }
+
+    public String getIUCNCategory() {
+        return this.IUCN;
     }
 
     public Drawable getImage() {
@@ -129,13 +166,18 @@ public class Animal {
     }
 
     /*
-        Prints the Animal to console.
-         */
+    Prints the Animal to console.
+     */
     public void printTraits() {
         System.out.println("Name: " + this.name);
+        System.out.println("Vertebrate/Invertebrate: " + this.vertInvert);
         System.out.println("Species: " + this.species);
-        System.out.println("Physical Characteristics: " + this.physicalCharacteristics);
+        System.out.println("Cold/Warm blooded: " + this.blooded);
         System.out.println("Habitat: " + this.habitat);
         System.out.println("Diet: " + this.diet);
+        System.out.println("Physical Characteristics: " + this.physicalCharacteristics);
+        System.out.println("Known For: " + this.knownFor);
+        System.out.println("IUCN Red List Category: " + this.IUCN);
+
     }
 }
