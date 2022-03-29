@@ -44,29 +44,34 @@ public class InfoPage extends AppCompatActivity {
     }
 
     public void populatePage() {
+        ImageView animalImage = findViewById(R.id.animalImageView);
 
-        TextView headerHabitat = findViewById(R.id.sectionHeader1);
-        TextView headerDiet = findViewById(R.id.sectionHeader2);
-        TextView headerPhysicalChars = findViewById(R.id.sectionHeader3);
+        TextView headerSpecies = findViewById(R.id.sectionHeader1);
+        TextView headerHabitat = findViewById(R.id.sectionHeader2);
+        TextView headerDiet = findViewById(R.id.sectionHeader3);
+        TextView headerPhysicalChars = findViewById(R.id.sectionHeader4);
+        TextView headerKnownFor = findViewById(R.id.sectionHeader5);
+        TextView headerIUCNCategory = findViewById(R.id.sectionHeader6);
 
+        headerSpecies.setText("Species Group");
         headerHabitat.setText("Habitat");
         headerDiet.setText("Diet");
         headerPhysicalChars.setText("Physical Characteristics");
+        headerKnownFor.setText("Known For");
+        headerIUCNCategory.setText("IUCN Category");
 
         TextView animalNameText = findViewById(R.id.animalnameTextView);
-        TextView animalVertInvertText = findViewById(R.id.animalinfo7TextView);
         TextView animalSpeciesText = findViewById(R.id.animalinfo1TextView);
-        TextView animalBloodedText = findViewById(R.id.animalinfo8TextView);
-        TextView animalHabitatText = findViewById(R.id.animalinfo2TextView);
-        TextView animalDietText = findViewById(R.id.animalinfo3TextView);
-        TextView animalPhysCharsText = findViewById(R.id.animalinfo4TextView);
-        TextView animalKnownForText = findViewById(R.id.animalinfo5TextView);
-        TextView animalIUCNCategoryText = findViewById(R.id.animalinfo6TextView);
+        TextView animalBloodedText = findViewById(R.id.animalinfo2TextView);
+        TextView animalVertInvertText = findViewById(R.id.animalinfo3TextView);
+        TextView animalHabitatText = findViewById(R.id.animalinfo4TextView);
+        TextView animalDietText = findViewById(R.id.animalinfo5TextView);
+        TextView animalPhysCharsText = findViewById(R.id.animalinfo6TextView);
+        TextView animalKnownForText = findViewById(R.id.animalinfo7TextView);
+        TextView animalIUCNCategoryText = findViewById(R.id.animalinfo8TextView);
 
-        ImageView animalImage = findViewById(R.id.animalImageView);
 
         String path;
-
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             path = extras.getString("animalName");

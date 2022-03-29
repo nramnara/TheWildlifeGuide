@@ -7,8 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 
@@ -23,6 +27,8 @@ public class SearchPage extends AppCompatActivity {
 
     //initialize the search page recycler view and listener
     private RecyclerView recyclerView;
+
+    private SearchPage_recyclerAdapter adapter;
 
     //initialize the search page's recyclerView's click listener
     private SearchPage_recyclerAdapter.searchpage_RecyclerViewClickListener listener;
@@ -39,8 +45,11 @@ public class SearchPage extends AppCompatActivity {
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         /* Hides ActionBar at the top of the app */
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        //getActionBar().setDisplayShowTitleEnabled(false);
+        //getActionBar().setTitle("All Animals");
 
+        getSupportActionBar().setTitle("ALL ANIMALS");
         //-------------------------------------
 
 
@@ -67,7 +76,10 @@ public class SearchPage extends AppCompatActivity {
 
     private void setSearchPageAdapter() {
         setOnClickListener();
-        SearchPage_recyclerAdapter adapter = new SearchPage_recyclerAdapter(this.animalList,listener);
+
+        //SearchPage_recyclerAdapter adapter = new SearchPage_recyclerAdapter(this.animalList,listener);
+        adapter = new SearchPage_recyclerAdapter(this.animalList,listener);
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -89,5 +101,30 @@ public class SearchPage extends AppCompatActivity {
     public void openImageSearch(){
         Intent intent = new Intent(this,ImageSearchPage.class);
         startActivity(intent);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
+        return true;
     }
 }

@@ -178,6 +178,5 @@ public class Animal {
         System.out.println("Physical Characteristics: " + this.physicalCharacteristics);
         System.out.println("Known For: " + this.knownFor);
         System.out.println("IUCN Red List Category: " + this.IUCN);
-
     }
 }

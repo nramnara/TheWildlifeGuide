@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         /* Hides ActionBar at the top of the app */
         getSupportActionBar().hide();
-
         //-------------------------------------
 
         //set value to searchButton

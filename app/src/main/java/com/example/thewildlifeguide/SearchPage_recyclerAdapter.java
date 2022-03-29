@@ -3,20 +3,26 @@ package com.example.thewildlifeguide;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
-public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_recyclerAdapter.MyViewHolder>{
+public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_recyclerAdapter.MyViewHolder> implements Filterable {
 
     private ArrayList<String> animalList;
+    private ArrayList<String> animalListFull;
     private searchpage_RecyclerViewClickListener listener;
 
     public SearchPage_recyclerAdapter (ArrayList<String> animalList, searchpage_RecyclerViewClickListener listener) {
         this.animalList = animalList;
+        this.animalListFull = new ArrayList<>(animalList);
         this.listener = listener;
     }
 
@@ -57,4 +63,42 @@ public class SearchPage_recyclerAdapter extends RecyclerView.Adapter<SearchPage_
     public interface searchpage_RecyclerViewClickListener {
         void onClick(View view,int position);
     }
+
+    //--------------------------------------------
+
+    @Override
+    public Filter getFilter() {
+        return animalFilter;
+    }
+
+    private Filter animalFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<String> filteredList = new ArrayList<>();
+
+            if (charSequence == null || charSequence.length() == 0) {
+                filteredList.addAll(animalListFull);
+            } else {
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+
+                for (String i: animalListFull) {
+                    if (i.toLowerCase().contains(filterPattern)) {
+                        filteredList.add(i);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            animalList.clear();
+            animalList.addAll((List) filterResults.values);
+            notifyDataSetChanged();
+        }
+    };
 }
