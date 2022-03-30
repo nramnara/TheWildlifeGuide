@@ -18,7 +18,7 @@ Diet
 All snakes are carnivores but their diet depends on the species. 
 Some eat warm-blooded prey (e.g., rodents, rabbits, birds), while others eat insects, amphibians (frogs or toads), eggs, other reptiles, fish, earthworms, or slugs.
 Some snakes (like cobras, vipers and rattlesnakes) are venomous and kill or paralyze their prey by injecting poison through hollow fangs.
-Sankes have been known to sometimes eat larger animals like crocodiles, deer, and cattle. 
+Snakes have been known to sometimes eat larger animals like crocodiles, deer, and cattle.
 #####
 Physical Characteristics
 Snakes differ from other reptiles in being limbless and having a greatly elongated body and tail. 
@@ -28,6 +28,6 @@ Known For
 Depending on the species, snakes are infamous for a variety of reasons. Be it their venom, the hissing sound their tongue makes, or the fact that some of them strangle their prey to death and then swallow it whole. They can, and have, eaten humans.
 #####
 IUCN Category
-____
+LC - Least Concern
 #####
 $$$$$END$$$$$
