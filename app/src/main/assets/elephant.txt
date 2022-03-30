@@ -1,0 +1,32 @@
+Name
+Elephant
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+They are found most often in savannas, grasslands, and forests.
+However, they do occupy a wide range of habitats, including deserts, swamps, and highlands in tropical and subtropical regions of Africa and Asia.
+#####
+Diet
+All elephant species are herbivores, feeding on grasses and leaves and using their powerful trunks to dig for roots or break off large tree branches.
+They also eat tree produce (fruits) and tree matter (roots, flowers, twigs, bark, etc.)
+Elephants need to consume a large amount of food each day, so they are usually moving to find their next meal.
+#####
+Physical Characteristics
+Elephants are grayish to brown in colour, and their body hair is sparse and coarse.
+They have four legs, a tail, and tusks of ivory. Their ears are wide and flat and their long nose (called trunks) that can be about 6-8 feet long.
+#####
+Known For
+The largest living land mammal, known for their tusks and trunks (and the trumpet sounds they make with them). 
+#####
+IUCN Category
+The African Savannah Elephant and the Asian Elephant are EN - Endangered. And the African Forest Elephant is CR - Critically Endangered.
+#####
+$$$$$END$$$$$

@@ -1,0 +1,33 @@
+Name
+Chameleon
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Reptile
+#####
+Blooded
+Cold-blooded
+##### 
+Habitat
+Chameleons live in a variety of habitats, from rainforests and lowlands to deserts, semi-deserts, scrub savannas, and even mountains.
+Those that hang out in trees are usually green while the ones that live in deserts are most often brown.
+#####
+Diet
+Chameleons generally eat insects such as locusts, mantids, grasshoppers, stick insects, and crickets. 
+Some larger chameleons also eat small birds and other lizards. 
+A few have been known to eat a bit of plant material.  
+#####
+Physical Characteristics
+Chameleons have long, slim legs, with four feet. Their eyes can move independently of each other and they have prehensile tails that wrap in a coil-like fashion around limbs to maintain balance.  
+As is typical of reptiles, they have scaly skin, which can undergoe a particular range of color change. 
+They actually change their colour due to a number of different factors, including their mood (fear, victory, etc), changes in light or temperature, or the humidity of their environment.
+#####
+Known For
+Uber famous for their ability to change color. Many chameleons can assume a green, yellow, cream, or dark brown coloration. 
+#####
+IUCN Category
+Many species of the chameleon are considered CR - Critically Endangered.
+#####
+$$$$$END$$$$$

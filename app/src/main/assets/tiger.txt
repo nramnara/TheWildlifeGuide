@@ -1,0 +1,31 @@
+Name
+Tiger
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+Tigers live in the wild and can live in a range of environments, including the Siberian taiga, swamps, grasslands, and rainforests.
+They are native to isolated areas of Asia and east Russia.
+#####
+Diet
+Tigers eat large prey animals like deer and wild pigs, though they make exceptions for some small animals, including porcupines. 
+#####
+Physical Characteristics
+Tigers have hair all over their body to insulate, protect and camouflage themselves in their habitat. 
+Each tiger has its own individual pattern; their fur range from light orange to reddish in color with distinct dark striping patterm on its hair and skin.
+They also, of course, have sharp teeth and a strong jaw which is useful for catching and eating their prey. 
+#####
+Known For
+Tigers are the largest members of the cat family and are renowned for their power and strength. 
+#####
+IUCN Category
+EN - Endangered
+#####
+$$$$$END$$$$$

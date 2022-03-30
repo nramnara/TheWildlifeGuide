@@ -1,0 +1,31 @@
+Name
+Koala
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+They live over a range of open forest and woodland communities, especially where eucalyptus trees are, because they depend on that select group of trees for food. 
+They are found in larger numbers in areas with more fertile soil and along watercourses. 
+#####
+Diet
+Koalas are herbivores and very selective feeders, only eating leaves of certain eucalyptus trees.
+Rarely, they might eat leaves from related tree species like lophostemon and corymbia species (paperbark and bloodwood trees).
+#####
+Physical Characteristics
+The koala is virtually tailless, with a stout and gray body and a pale yellow or cream-coloured.
+The broad face has a wide, rounded, leathery nose, small yellow eyes, and big fluffy ears, with strong and flawed feet.
+#####
+Known For
+Well-known for their furry ears and big black nose, the koala's diet leaves it with little energy, so the animal spends long hours sleeping in trees. 
+#####
+IUCN Category
+Koalas are EN - Endangered
+#####
+$$$$$END$$$$$

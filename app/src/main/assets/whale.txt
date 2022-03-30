@@ -1,0 +1,30 @@
+Name
+Whale
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+All whales are entirely aquatic and distributed throughout the world’s oceans and seas, from the Equator to the polar ice.
+#####
+Diet
+The majority of toothed whales will eat whale food species such as squid, octopus, crustaceans and fish. 
+Other toothed whales, such as the killer whale, will hunt bigger marine mammals including whale food such as seals, sharks, birds, and even other whales.
+#####
+Physical Characteristics
+In general, they have specialized adaptations such as flippers and tail flukes for living in water.
+Whales must surface regularly to breathe, evacuating their lungs more completely than most mammals in an almost explosive breath known as a blow.
+#####
+Known For
+Whales are the heaviest known animals, living or fossil. 
+#####
+IUCN Category
+The Blue Whale, the largest animal to have ever lived on the planet (bigger than dinosaurs) are listed as EN - Endangered.
+#####
+$$$$$END$$$$$

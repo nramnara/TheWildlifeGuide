@@ -1,0 +1,33 @@
+Name
+Snake
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Reptile
+#####
+Blooded
+Cold-blooded
+##### 
+Habitat
+Snakes live in a wide variety of land and water habitats. You can find some particular species in the driest desert, and some in the wettest tropical.
+Some of these include forests, swamps, grasslands, deserts and in both fresh and salt water. 
+#####
+Diet
+All snakes are carnivores but their diet depends on the species. 
+Some eat warm-blooded prey (e.g., rodents, rabbits, birds), while others eat insects, amphibians (frogs or toads), eggs, other reptiles, fish, earthworms, or slugs.
+Some snakes (like cobras, vipers and rattlesnakes) are venomous and kill or paralyze their prey by injecting poison through hollow fangs.
+Sankes have been known to sometimes eat larger animals like crocodiles, deer, and cattle. 
+#####
+Physical Characteristics
+Snakes differ from other reptiles in being limbless and having a greatly elongated body and tail. 
+Snakes also lack movable eyelids and external ear openings.
+#####
+Known For
+Depending on the species, snakes are infamous for a variety of reasons. Be it their venom, the hissing sound their tongue makes, or the fact that some of them strangle their prey to death and then swallow it whole. They can, and have, eaten humans.
+#####
+IUCN Category
+____
+#####
+$$$$$END$$$$$

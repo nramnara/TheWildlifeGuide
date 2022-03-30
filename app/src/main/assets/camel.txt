@@ -1,0 +1,29 @@
+Name
+Camel
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+No matter the type, camels are usually found in the desert, prairie or steppe. 
+#####
+Diet
+Camels are herbivores, eating grass, grains, wheat and oats. Also leaves and branches, bushes, hay, straw, and even thorny plants like cacti.
+Their humps store fat that nourishes them and helps them survive long periods of time without eating or drinking.
+#####
+Physical Characteristics
+Generally, camels have long curved necks, humped backs, broad large feet, tufted ails and four teats. 
+#####
+Known For
+Camels are famous for their humps and for the fact that they can also go long periods without drinking. 
+#####
+IUCN Category
+CR - Critically Endangered
+#####
+$$$$$END$$$$$

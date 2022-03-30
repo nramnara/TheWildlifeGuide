@@ -1,16 +1,31 @@
 Name
 Spider
 #####
-Species
-Arachnids (invertebrate)
+Vert Invert
+Invertebrate
 #####
-Physical Characteristics
-They differ from insects in having eight legs rather than six and in having the body divided into two parts rather than three. The use of silk is highly developed among spiders.
+Species
+Arachnid
+#####
+Blooded
+Cold-blooded
 #####
 Habitat
-Spiders' habitat varies depending on species. Some spiders are indoor spiders and others thrive outside.
+Spiders' habitat varies depending on species.
+Some spiders are indoor spiders and others thrive outside.
 #####
 Diet
-All spiders are predators, feeding almost entirely on other arthropods, especially insects. Some spiders are active hunters that chase and overpower their prey.
+All spiders are predators, feeding almost entirely on other arthropods, especially insects.
+Some spiders are active hunters that chase and overpower their prey.
+#####
+Physical Characteristics
+They differ from insects in having eight legs rather than six and in having the body divided into two parts rather than three.
+The use of silk is highly developed among spiders (for their webs).
+#####
+Known For
+Spiders are known for their eight legs and elaborate webs of silk. The black widow spider sometimes kills and eats their mating counterparts.
+#####
+IUCN Category
+LC - Least Concern
 #####
 $$$$$END$$$$$

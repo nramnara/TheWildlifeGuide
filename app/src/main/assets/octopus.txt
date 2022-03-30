@@ -1,17 +1,34 @@
 Name
 Octopus
 #####
-Species
-Mollusk(invertebrate)
+Vert Invert
+Invertebrate
 #####
-Physical Characteristics
-The typical octopus has a saccular body: the head is only slightly demarcated from the body and has large, complex eyes and eight contractile arms. Each arm bears two rows of fleshy suckers that are capable of great holding power. The arms are joined at their bases by a web of tissue known as the skirt, at the centre of which lies the mouth. The latter organ has a pair of sharp, horny beaks and a filelike organ, the radula, for drilling shells and rasping away flesh.
+Species
+Mollusc
+#####
+Blooded
+Cold-blooded
 #####
 Habitat
-All octopus live in water bodies mainly ocean 
+A global species that is found in every ocean in the world.
+They tend to live near the ocean floor and spend a lot of their time in dens, which are small holes and crevices formed in rocks and coral.
 #####
 Diet
 Octopuses feed mainly upon crabs and lobsters, although some are plankton feeders, and they are fed upon by a number of marine fishes.
+#####
+Physical Characteristics
+The typical octopus has a saccular body:
+the head is only slightly demarcated from the body and has large, complex eyes and eight contractile arms.
+Each arm bears two rows of fleshy suckers that are capable of great holding power.
+The arms are joined at their bases by a web of tissue known as the skirt, at the centre of which lies the mouth.
+The latter organ has a pair of sharp, horny beaks and a filelike organ, the radula, for drilling shells and rasping away flesh.
+#####
+Known For
+They are most famous for having eight arms. They also have blue blood and three hearts.
+#####
+IUCN Category
+LC - Least Concern
 #####
 $$$$$END$$$$$
 
