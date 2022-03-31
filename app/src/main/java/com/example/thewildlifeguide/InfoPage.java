@@ -94,6 +94,7 @@ public class InfoPage extends AppCompatActivity {
 
     public void openSettingsPage(){
         Intent intent = new Intent(this,SettingsPage.class);
+        intent.putExtra("fromInfo",currentAnimal.getName());
         startActivity(intent);
     }
 
