@@ -31,4 +31,9 @@ Crows are known for their intelligence and adaptability, and for their loud, har
 IUCN Category
 LC - LEast Concern
 #####
+Similar Animals
+Eagle;
+Peacock;
+Penguin;
+#####
 $$$$$END$$$$$

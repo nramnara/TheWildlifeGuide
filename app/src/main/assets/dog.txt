@@ -27,4 +27,8 @@ Dogs are popular pets, and some are even trained to help humans do certain kinds
 IUCN Category
 LC - Least Concern
 #####
+Similar Animals
+Cat;
+
+#####
 $$$$$END$$$$$

@@ -26,4 +26,7 @@ Camels are famous for their humps and for the fact that they can also go long pe
 IUCN Category
 CR - Critically Endangered
 #####
+Similar Animals
+Unique Animal
+#####
 $$$$$END$$$$$

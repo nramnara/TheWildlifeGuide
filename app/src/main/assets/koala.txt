@@ -28,4 +28,8 @@ Well-known for their furry ears and big black nose, the koala's diet leaves it w
 IUCN Category
 Koalas are EN - Endangered
 #####
+Similar Animals
+Bear;
+Panda;
+#####
 $$$$$END$$$$$

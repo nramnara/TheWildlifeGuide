@@ -30,4 +30,7 @@ Humans are known (by humans) to have big and complex brains and superior intelle
 IUCN Category
 LC - Least Concern
 #####
+Similar Animals
+Unique Animal
+#####
 $$$$$END$$$$$

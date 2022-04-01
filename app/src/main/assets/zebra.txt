@@ -28,4 +28,7 @@ Zebras are famous for their striped bodies.
 IUCN Category
 Some Zebras are EN - Endangered. The Plains Zebra are NT - Near Threatened.
 #####
+Similar Animals
+Reindeer;
+#####
 $$$$$END$$$$$

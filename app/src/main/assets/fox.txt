@@ -27,4 +27,7 @@ Widely held as a symbol of animal cunning, the red fox is the subject of conside
 IUCN Category
 The Red Fox is LC - Least Concern. Though, many lesser known species are CR - Critically Endangered.
 #####
+Similar Animals
+Cat;
+#####
 $$$$$END$$$$$

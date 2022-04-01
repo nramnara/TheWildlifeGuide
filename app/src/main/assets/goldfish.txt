@@ -27,4 +27,7 @@ Goldfish are popular 'starter' pets that have great senses of smell and hearing.
 IUCN Category
 LC - Least Concern
 #####
+Similar Animals
+Clam;
+#####
 $$$$$END$$$$$

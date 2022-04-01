@@ -5,7 +5,7 @@ Vert Invert
 Invertebrate
 #####
 Species
-Mollusc
+Mollusk
 #####
 Blooded
 Cold-blooded
@@ -29,6 +29,9 @@ They are most famous for having eight arms. They also have blue blood and three 
 #####
 IUCN Category
 LC - Least Concern
+#####
+Similar Animals
+Clam;
 #####
 $$$$$END$$$$$
 

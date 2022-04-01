@@ -30,4 +30,8 @@ Bears are known for their coat of fur and size.
 IUCN Category
 Many bears are VU - Vulnerable
 #####
+Similar Animals
+Panda;
+Koala;
+#####
 $$$$$END$$$$$

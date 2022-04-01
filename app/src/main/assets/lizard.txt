@@ -28,4 +28,9 @@ Lizards are able to stay completely still for hours.
 IUCN Category
 Most lizards are NT - Near Threatened
 #####
+Similar Animals
+Snake;
+Chameleon;
+Crocodile;
+#####
 $$$$$END$$$$$

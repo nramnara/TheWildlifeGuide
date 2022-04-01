@@ -30,4 +30,8 @@ Uber famous for their ability to change color. Many chameleons can assume a gree
 IUCN Category
 Many species of the chameleon are considered CR - Critically Endangered.
 #####
+Similar Animals
+Lizard;
+Crocodile;
+#####
 $$$$$END$$$$$

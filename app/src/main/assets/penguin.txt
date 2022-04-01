@@ -5,7 +5,7 @@ Vert Invert
 Vertebrate
 #####
 Species
-Birds
+Bird
 #####
 Blooded
 Warm-blooded
@@ -31,5 +31,9 @@ Penguins are expert swimmers and their fur coat of penguins has endeared them to
 #####
 IUCN Category
 NT - Near Threatened
+#####
+Similar Animals
+Crow;
+Flamingo;
 #####
 $$$$$END$$$$$

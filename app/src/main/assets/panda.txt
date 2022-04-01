@@ -30,4 +30,8 @@ Pandas have an endearing and captivating appearance that has made them popular a
 IUCN Category
 The Giant Panda is VU - Vulnerable and the Red Panda is EN - Endangered
 #####
+Similar Animals
+Bear;
+Koala;
+#####
 $$$$$END$$$$$

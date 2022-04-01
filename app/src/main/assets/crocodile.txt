@@ -29,4 +29,9 @@ Crocodiles are popular swamp animals.
 IUCN Category
 The species range from LC - Least Concern to CR - Critically Endangered
 #####
+Similar Animals
+Lizard;
+Chameleon;
+Snake;
+#####
 $$$$$END$$$$$

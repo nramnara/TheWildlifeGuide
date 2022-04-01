@@ -22,6 +22,7 @@ public class Animal {
     private String physicalCharacteristics = "";
     private String knownFor = "";
     private String IUCN = "";
+    private String similar = "";
 
     private Drawable image;
 
@@ -101,6 +102,14 @@ public class Animal {
                         text = reader.readLine();
                     }
                     this.IUCN = this.IUCN.substring(0, this.IUCN.length() - 1);
+
+                } else if (text.equals("Similar Animals")) {
+                    text = reader.readLine();
+                    while (!text.equals("#####")) {
+                        this.similar += text + " ";
+                        text = reader.readLine();
+                    }
+                    this.similar = this.similar.substring(0, this.similar.length() - 1);
                 }
             }
 
@@ -161,6 +170,8 @@ public class Animal {
         return this.IUCN;
     }
 
+    public String getSimilarAnimals() { return this.similar; }
+
     public Drawable getImage() {
         return this.image;
     }
@@ -178,5 +189,6 @@ public class Animal {
         System.out.println("Physical Characteristics: " + this.physicalCharacteristics);
         System.out.println("Known For: " + this.knownFor);
         System.out.println("IUCN Red List Category: " + this.IUCN);
+        System.out.println("Similar Animals: " + this.similar);
     }
 }

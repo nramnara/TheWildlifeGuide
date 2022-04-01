@@ -27,4 +27,7 @@ Whales are the heaviest known animals, living or fossil.
 IUCN Category
 The Blue Whale, the largest animal to have ever lived on the planet (bigger than dinosaurs) are listed as EN - Endangered.
 #####
+Similar Animals
+Seal;
+#####
 $$$$$END$$$$$

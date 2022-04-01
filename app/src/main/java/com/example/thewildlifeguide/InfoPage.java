@@ -52,6 +52,7 @@ public class InfoPage extends AppCompatActivity {
         TextView headerPhysicalChars = findViewById(R.id.sectionHeader4);
         TextView headerKnownFor = findViewById(R.id.sectionHeader5);
         TextView headerIUCNCategory = findViewById(R.id.sectionHeader6);
+        TextView headerSimilarAnimals = findViewById(R.id.sectionHeader7);
 
         headerSpecies.setText("Species Group");
         headerHabitat.setText("Habitat");
@@ -59,6 +60,7 @@ public class InfoPage extends AppCompatActivity {
         headerPhysicalChars.setText("Physical Characteristics");
         headerKnownFor.setText("Known For");
         headerIUCNCategory.setText("IUCN Category");
+        headerSimilarAnimals.setText("Similar Animals");
 
         TextView animalNameText = findViewById(R.id.animalnameTextView);
         TextView animalSpeciesText = findViewById(R.id.animalinfo1TextView);
@@ -69,6 +71,7 @@ public class InfoPage extends AppCompatActivity {
         TextView animalPhysCharsText = findViewById(R.id.animalinfo6TextView);
         TextView animalKnownForText = findViewById(R.id.animalinfo7TextView);
         TextView animalIUCNCategoryText = findViewById(R.id.animalinfo8TextView);
+        TextView animalSimilarAnimalsText = findViewById(R.id.animalinfo9TextView);
 
 
         String path;
@@ -87,6 +90,7 @@ public class InfoPage extends AppCompatActivity {
         animalPhysCharsText.setText(currentAnimal.getPhysChars());
         animalKnownForText.setText(currentAnimal.getKnownFor());
         animalIUCNCategoryText.setText(currentAnimal.getIUCNCategory());
+        animalSimilarAnimalsText.setText(currentAnimal.getSimilarAnimals());
 
         animalImage.setImageDrawable(currentAnimal.getImage());
 

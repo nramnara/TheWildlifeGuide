@@ -28,4 +28,8 @@ Clams are known for their pearls. The clam secretes a fluid to coat the irritant
 IUCN Category
 Clams are VU - Vulnerable
 #####
+Similar Animals
+Goldfish;
+Octopus;
+#####
 $$$$$END$$$$$

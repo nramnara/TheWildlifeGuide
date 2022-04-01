@@ -30,4 +30,10 @@ Cats are one of the most popular household pets in the world.
 IUCN Category
 LC - Least Concern
 #####
+Similar Animals
+Dog;
+Fox;
+Tiger;
+Lion;
+#####
 $$$$$END$$$$$

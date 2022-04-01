@@ -28,4 +28,8 @@ Flamingos are famous for their bright pink feathers, stilt-like legs, and S-shap
 IUCN Category
 The Greater Flamingo is of LC - Least Concern, and the Lesser Flamingo is NT - Near Threatened
 #####
+Similar Animals
+Penguin;
+Peacock;
+#####
 $$$$$END$$$$$

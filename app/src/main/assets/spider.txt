@@ -28,4 +28,7 @@ Spiders are known for their eight legs and elaborate webs of silk. The black wid
 IUCN Category
 LC - Least Concern
 #####
+Similar Animals
+Unique Animal
+#####
 $$$$$END$$$$$

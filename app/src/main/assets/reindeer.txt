@@ -29,4 +29,7 @@ Reindeer are known around the world as the fictional sidekicks of Santa Claus.
 IUCN Category
 VU - Vulnerable
 #####
+Similar Animals
+Zebra;
+#####
 $$$$$END$$$$$

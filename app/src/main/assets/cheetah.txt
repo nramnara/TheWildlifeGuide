@@ -28,4 +28,8 @@ Cheetahs are the world's fastest land animal, capable of reaching speeds of up t
 IUCN Category
 VU - Vulnerable
 #####
+Similar Animals
+Lion;
+Tiger;
+#####
 $$$$$END$$$$$

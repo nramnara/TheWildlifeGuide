@@ -27,4 +27,8 @@ IUCN Category
 CR - Critically Endangered. 
 This means they are considered to be facing an extremely high risk of extinction.
 #####
+Similar Animals
+Cat;
+Tiger;
+#####
 $$$$$END$$$$$

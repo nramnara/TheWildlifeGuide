@@ -30,4 +30,9 @@ Depending on the species, snakes are infamous for a variety of reasons. Be it th
 IUCN Category
 LC - Least Concern
 #####
+Similar Animals
+Chameleon;
+Crocodile;
+Lizard;
+#####
 $$$$$END$$$$$

@@ -30,4 +30,7 @@ Seals are the acrobats of teh sea, often performing tricks in attractions like z
 IUCN Category
 Most seals are LC - Least Concern
 #####
+Similar Animals
+Whale;
+#####
 $$$$$END$$$$$

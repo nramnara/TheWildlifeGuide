@@ -28,4 +28,8 @@ Tigers are the largest members of the cat family and are renowned for their powe
 IUCN Category
 EN - Endangered
 #####
+Similar Animals
+Cat;
+Lion;
+#####
 $$$$$END$$$$$
