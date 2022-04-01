@@ -14,6 +14,7 @@ public class ImageSearchPage extends AppCompatActivity {
 
     //initialize image search buttons
     private Button textSearchButton;
+    private Button settingsButton;
 
     //initialize animal list
     private AnimalList list;
@@ -44,6 +45,14 @@ public class ImageSearchPage extends AppCompatActivity {
         //set value to text search button
         textSearchButton = (Button) findViewById(R.id.textsearchButton);
 
+        settingsButton = (Button) findViewById(R.id.ImageSearchPageSettings_button);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSettingsPage();
+            }
+        });
+
         //set value to recyclerView
         recyclerView = findViewById(R.id.searchPage_recyclerView);
 
@@ -63,6 +72,10 @@ public class ImageSearchPage extends AppCompatActivity {
     //take the user to the text search page
     public void openTextSearch(){
         Intent intent = new Intent(this,SearchPage.class);
+        startActivity(intent);
+    }
+    public void openSettingsPage(){
+        Intent intent = new Intent(this,SettingsPage.class);
         startActivity(intent);
     }
 }

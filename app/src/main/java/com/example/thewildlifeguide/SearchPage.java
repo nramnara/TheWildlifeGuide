@@ -21,6 +21,7 @@ public class SearchPage extends AppCompatActivity {
 
     //initialize the image search button
     private Button imageSearchButton;
+    private Button settingsButton;
 
     //initialize animal list
     private AnimalList list;
@@ -53,6 +54,13 @@ public class SearchPage extends AppCompatActivity {
         getSupportActionBar().setTitle("ALL ANIMALS");
         //-------------------------------------
 
+        settingsButton = (Button) findViewById(R.id.SearchPageSettings_button);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSettingsPage();
+            }
+        });
 
         //set value to imageSearchButton
         imageSearchButton = (Button) findViewById(R.id.searchpageImageSearch_button);
@@ -101,6 +109,10 @@ public class SearchPage extends AppCompatActivity {
     //take the user to the image search activity
     public void openImageSearch(){
         Intent intent = new Intent(this,ImageSearchPage.class);
+        startActivity(intent);
+    }
+    public void openSettingsPage(){
+        Intent intent = new Intent(this,SettingsPage.class);
         startActivity(intent);
     }
 
