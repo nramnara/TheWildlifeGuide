@@ -79,7 +79,7 @@ public class ImageSearchPage extends AppCompatActivity {
 
         //when page is called,set the adapter using setAdapter()
         setAdapter();
-        
+
 
         //set value to text search button
         textSearchButton = (Button) findViewById(R.id.textsearchButton);

@@ -2,31 +2,60 @@ package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.UiModeManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 public class SettingsPage extends AppCompatActivity {
 
     //initialize Setting's buttons
     private Button backButton;
+    private UiModeManager uiModeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_page);
 
-        //-------------------------------------
+        /*
+        //Hides the bar at the top of phone
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        */
 
-        /* Hides the bar at the top of phone */
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        /* Hides ActionBar at the top of the app */
+        //Hides ActionBar at the top of the app
         getSupportActionBar().hide();
 
+
         //-------------------------------------
+        uiModeManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
+
+        Switch darkMode = findViewById(R.id.darkMode);
+
+        darkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(darkMode.isChecked()) {
+                    System.out.println("Yes");
+                    View v = findViewById(android.R.id.content).getRootView();
+                    v.setBackgroundResource(R.color.black);
+
+                } else {
+                    uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
+                    System.out.println("No");
+                    View v = findViewById(android.R.id.content).getRootView();
+                    v.setBackgroundResource(R.color.white);
+                }
+
+            }
+        });
+
+        //-------------------------------------
+
 
 
         //set value to backButton
@@ -40,6 +69,10 @@ public class SettingsPage extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 
     // take the user to the homepage (MainActivity) activity
     public void openHomePage(){
@@ -71,5 +104,16 @@ public class SettingsPage extends AppCompatActivity {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
+    }
+
+
+    public void darkMode(View v, Switch darkMode) {
+
+        if(darkMode.isChecked()) {
+            uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
+        } else {
+            uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
+        }
+
     }
 }
