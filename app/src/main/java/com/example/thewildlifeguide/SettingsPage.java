@@ -2,7 +2,9 @@ package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.UiModeManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +13,17 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class SettingsPage extends AppCompatActivity {
 
     //initialize Setting's buttons
     private Button backButton;
     private UiModeManager uiModeManager;
+    //private Context context = this.getApplicationContext();
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +39,9 @@ public class SettingsPage extends AppCompatActivity {
         //Hides ActionBar at the top of the app
         getSupportActionBar().hide();
 
+        //setSwitches();
 
+        /*
         //-------------------------------------
         uiModeManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
 
@@ -53,8 +63,26 @@ public class SettingsPage extends AppCompatActivity {
 
             }
         });
-
         //-------------------------------------
+*/
+        /*
+        Switch switchHabitat = findViewById(R.id.textSwitch1);
+        TextView textHabitat = (TextView) findViewById(R.id.animalinfo4TextView);
+        switchHabitat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(switchHabitat.isChecked()) {
+                    System.out.println("Yes");
+                    System.out.println(textHabitat.getText());
+                } else {
+                    System.out.println("No");
+                }
+            }
+        });
+        */
+
+
+
 
 
 
@@ -106,14 +134,28 @@ public class SettingsPage extends AppCompatActivity {
         }
     }
 
+    public void setSwitches() {
+        Switch switchHabitat = findViewById(R.id.textSwitch1);
+        Switch switchDiet = findViewById(R.id.textSwitch2);
+        Switch switchPhysicalChars = findViewById(R.id.textSwitch3);
+        Switch switchKnownFor = findViewById(R.id.textSwitch4);
+        Switch switchIUCN = findViewById(R.id.textSwitch5);
 
-    public void darkMode(View v, Switch darkMode) {
 
-        if(darkMode.isChecked()) {
-            uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
-        } else {
-            uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
-        }
+        switchHabitat.setText("Habitat");
+        switchDiet.setText("Diet");
+        switchPhysicalChars.setText("Physical Characteristics");
+        switchKnownFor.setText("Known For");
+        switchIUCN.setText("IUCN Category");
+
+
+        TextView headerDiet = findViewById(R.id.sectionHeader3);
+        TextView headerPhysicalChars = findViewById(R.id.sectionHeader4);
+        TextView headerKnownFor = findViewById(R.id.sectionHeader5);
+        TextView headerIUCNCategory = findViewById(R.id.sectionHeader6);
+
+        Context context = this;
+
 
     }
 }
