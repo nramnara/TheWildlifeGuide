@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void setTheme(View v) {
+        v.setBackgroundResource(R.color.black);
+    }
+
     //take the user to the SearchPage activity
     public void openSearchPage(){
         Intent intent = new Intent(this,SearchPage.class);
@@ -67,5 +72,9 @@ public class MainActivity extends AppCompatActivity {
     public void openSettingsPage(){
         Intent intent = new Intent(this,SettingsPage.class);
         startActivity(intent);
+    }
+
+    public View getView() {
+        return findViewById(android.R.id.content).getRootView();
     }
 }
