@@ -78,7 +78,7 @@ public class InfoPage extends AppCompatActivity {
             currentAnimal = new Animal(this, path);
         }
 
-       animalNameText.setText(currentAnimal.getName());
+        animalNameText.setText(currentAnimal.getName());
         animalVertInvertText.setText(currentAnimal.getVertInvert());
         animalSpeciesText.setText(currentAnimal.getAnimalSpecies());
         animalBloodedText.setText(currentAnimal.getBlooded());
