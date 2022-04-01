@@ -1,8 +1,8 @@
 package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
-import android.app.Activity;
 import android.app.UiModeManager;
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,6 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class SettingsPage extends AppCompatActivity {
 
     //initialize Setting's buttons
@@ -22,13 +20,27 @@ public class SettingsPage extends AppCompatActivity {
     private UiModeManager uiModeManager;
     //private Context context = this.getApplicationContext();
 
-
+    Switch aSwitch;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_page);
+        getSupportActionBar().hide();
+        aSwitch=findViewById(R.id.darkModeSwitch);
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+                else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
 
         /*
         //Hides the bar at the top of phone
@@ -45,7 +57,7 @@ public class SettingsPage extends AppCompatActivity {
         //-------------------------------------
         uiModeManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
 
-        Switch darkMode = findViewById(R.id.darkMode);
+        //Switch darkMode = findViewById(R.id.darkMode);
 
         darkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -81,10 +93,10 @@ public class SettingsPage extends AppCompatActivity {
         });
         */
 
+/*
 
 
-
-
+*/
 
         //set value to backButton
         backButton = (Button) findViewById(R.id.settingsBack_button);
