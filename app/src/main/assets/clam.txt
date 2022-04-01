@@ -1,0 +1,31 @@
+Name
+Clam
+#####
+Vert Invert
+Invertebrate
+#####
+Species
+Mollusk
+#####
+Blooded
+Cold-blooded
+##### 
+Habitat
+Clams can be found in almost all types of freshwater habitats, but are very common in large rivers and streams.
+Most burrow into the soft substrate to varying depths, while some groups live free on the sea floor.
+#####
+Diet
+These mollusks are omnivores that eat both plants and animals, albeit in their smallest forms.
+Clams eat plankton, algae, and other organic matter that passes through their filtration system.
+#####
+Physical Characteristics
+True clams, in the strict sense, are bivalves with equal shells closed by two adductor muscles.
+A clam's shell consists of two (usually equal) valves, which are connected by a hinge joint and a ligament that can be external or internal.
+#####
+Known For
+Clams are known for their pearls. The clam secretes a fluid to coat the irritant, layer upon layer, until a lustrous pearl is formed.
+#####
+IUCN Category
+Clams are VU - Vulnerable
+#####
+$$$$$END$$$$$

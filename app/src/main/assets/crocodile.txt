@@ -1,0 +1,32 @@
+Name
+Crocodile
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Reptile
+#####
+Blooded
+Cold-blooded
+##### 
+Habitat
+The Crocodile is a large aquatic reptile that lives throughout the Tropics in Africa, Asia, the Americas and Australia.
+Crocodiles tend to congregate in freshwater habitats like rivers, lakes, wetlands and sometimes in brackish water
+(water that is saltier than fresh water, but not as salty as seawater).
+#####
+Diet
+Crocodiles mostly feed on vertebrates like fish, reptiles, and mammals, sometimes with invertebrates like molluscs and crustaceans, depending on species.
+#####
+Physical Characteristics
+Crocodiles have powerful jaws with many conical teeth and short legs with clawed webbed toes.
+The tail is long and massive, and the skin is thick and plated.
+They share a unique body form that allows the eyes, ears, and nostrils to be above the water surface while most of the animal is hidden below.
+#####
+Known For
+Crocodiles are popular swamp animals.
+#####
+IUCN Category
+The species range from LC - Least Concern to CR - Critically Endangered
+#####
+$$$$$END$$$$$

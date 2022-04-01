@@ -1,0 +1,31 @@
+Name
+Zebra
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+Different zebras have different habitats.
+In general, they usually live in treeless grasslands and savanna woodlands and are absent from deserts, rainforests, and wetlands.
+#####
+Diet
+Zebras are herbivores and feed mostly by grazing on grasses, although they also might browse a bit on the leaves and stems of bushes.
+As the dry season arrives and the grasses die back, zebra herds travel to find more food and water holes for drinking.
+#####
+Physical Characteristics
+All zebras are dark-skinned animals.
+Hairs that contain melanin appear black, whereas those without melanin appear white creating stripes.
+#####
+Known For
+Zebras are famous for their striped bodies.
+#####
+IUCN Category
+Some Zebras are EN - Endangered. The Plains Zebra are NT - Near Threatened.
+#####
+$$$$$END$$$$$

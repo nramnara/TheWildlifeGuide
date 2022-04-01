@@ -1,0 +1,34 @@
+Name
+Crow
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Bird
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+Both northwestern and American crows tend to forage in open areas but prefer wooded habitats for nesting and roosting.
+The northwestern crow nests mainly in coniferous trees; the American crow, in deciduous and coniferous trees and, occasionally, in low bushes.
+#####
+Diet
+They are omnivores that enjoy meat and may even attack and kill young, weak animals.
+Berries, insects, the eggs of other birds, and carrion are also eaten.
+They also raid grain crops, sometimes they bury seeds or store them in crevices in bark.
+#####
+Physical Characteristics
+Adult American crows are completely black birds.
+The feathers have a glossy and slightly iridescent look.
+Crows have strong legs and toes.
+The bill is also black with a slight hook on the end.
+#####
+Known For
+Crows are known for their intelligence and adaptability, and for their loud, harsh 'caw'.
+#####
+IUCN Category
+LC - LEast Concern
+#####
+$$$$$END$$$$$

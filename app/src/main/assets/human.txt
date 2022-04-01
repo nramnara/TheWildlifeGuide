@@ -1,0 +1,33 @@
+Name
+Human
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+Humans are terrestrial animals.
+Most human habitats are in the same sorts of places as animal habitats, like forests and grasslands, but humans and animals live in very different kinds of shelters.
+They can usually build or find what they need in order to live almost anywhere in the whole world.
+#####
+Diet
+Humans are omnivores.
+People eat plants, such as vegetables and fruits.
+They eat animals, cooked as meat or used for products like milk or eggs.
+#####
+Physical Characteristics
+Human beings display a marked erectness of body carriage that frees the hands for use as manipulative members.
+Reproductive organs depend on sex; and the females have mammary glands specifically for lactation.
+#####
+Known For
+Humans are known (by humans) to have big and complex brains and superior intellectual and emotional intelligence.
+#####
+IUCN Category
+LC - Least Concern
+#####
+$$$$$END$$$$$

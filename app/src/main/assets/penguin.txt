@@ -1,0 +1,35 @@
+Name
+Penguin
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Birds
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+Penguin habitats include oceans and coasts.
+They generally live on islands and remote continental regions with few land predators, where their inability to fly is not detrimental to their survival.
+They are adapted to living at sea, and some species can spend months at a time at sea.
+#####
+Diet
+The type of food utilized varies with the species, the geographic region, and the time of year.
+Most of the smaller southern penguins feed primarily upon krill;
+Squid, cuttlefish, and small fish may form substantial fractions of the food, and for a few species, fish is the basic element of the diet.
+#####
+Physical Characteristics
+A penguin has a large head, short neck, and elongated body.
+The tail is short, stiff, and wedge-shaped.
+The legs and webbed feet are set far back on the body, which gives penguins their upright posture on land.
+Most are black on the back and white below, often with lines of black across the upper breast or spots of white on the head.
+#####
+Known For
+Penguins are expert swimmers and their fur coat of penguins has endeared them to people worldwide.
+#####
+IUCN Category
+NT - Near Threatened
+#####
+$$$$$END$$$$$

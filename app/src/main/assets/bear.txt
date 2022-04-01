@@ -1,0 +1,33 @@
+Name
+Bear
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+North American brown bears can be found in many habitats, from the fringes of deserts to high mountain forests and ice fields (though, they generally prefer forests).
+Polar bears' preferred habitat is, of course, on top of the ice that covers Arctic seas much of the year.
+#####
+Diet
+Bears are generally omnivorous, but dietary preferences range.
+Except for the carnivorous polar bear and the vegetarian giant panda, bears consume ants, bees, seeds of trees, roots, nuts, berries, insect larvae such as grubs.
+Prey taken by bears include rodents, fish, deer, pigs, and seals.
+#####
+Physical Characteristics
+Bears have large bodies with shaggy hair.
+They have powerful, stocky legs that make them very fast runners, while their clawed paws are useful for hunting and digging.
+They are adept at climbing and swimming, have a long snout and a short tail.
+#####
+Known For
+Bears are known for their coat of fur and size.
+#####
+IUCN Category
+Many bears are VU - Vulnerable
+#####
+$$$$$END$$$$$

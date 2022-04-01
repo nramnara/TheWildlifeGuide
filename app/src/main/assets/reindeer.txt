@@ -1,0 +1,32 @@
+Name
+Reindeer
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Mammal
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+They are found in the Arctic tundra (a cold treeless plain, frequently poorly drained)
+and adjacent boreal forests of Greenland, Scandinavia, Russia, Alaska, and Canada.
+#####
+Diet
+Their summer food is grass, sedges, green leaves of shrubs and new growth of larch, willow, and birch; mushrooms are sought in late summer.
+In winter, metabolism slows, and reindeer rely on high-carbohydrate lichens called reindeer moss, which they reach by digging craters in the snow.
+#####
+Physical Characteristics
+Reindeer have deeply cloven hoofs so the feet can spread on snow or soft ground; they are also good swimmers.
+Colour varies from whitish in winter to brown in summer.
+Antlers with up to 44 points can grow to 1.4 metres long in males; this is the only deer species in which females also have antlers.
+#####
+Known For
+Reindeer are known around the world as the fictional sidekicks of Santa Claus.
+#####
+IUCN Category
+VU - Vulnerable
+#####
+$$$$$END$$$$$

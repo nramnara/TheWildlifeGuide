@@ -1,0 +1,31 @@
+Name
+Flamingo
+#####
+Vert Invert
+Vertebrate
+#####
+Species
+Bird
+#####
+Blooded
+Warm-blooded
+##### 
+Habitat
+All flamingos are found in tropical and subtropical areas.
+The flamingo's most characteristic habitats are large alkaline or saline lakes or estuarine lagoons that usually lack vegetation.
+Lakes may be far inland or near the sea.
+#####
+Diet
+They eat algae, small seeds, tiny crustaceans (like brine shrimp), fly larvae, and other plants and animals that live in shallow waters.
+#####
+Physical Characteristics
+Flamingos are tall, pink wading birds with thick downturned bills.
+They have slender legs, long, graceful necks, large wings, and short tails.
+#####
+Known For
+Flamingos are famous for their bright pink feathers, stilt-like legs, and S-shaped neck.
+#####
+IUCN Category
+The Greater Flamingo is of LC - Least Concern, and the Lesser Flamingo is NT - Near Threatened
+#####
+$$$$$END$$$$$
