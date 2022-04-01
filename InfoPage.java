@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class InfoPage extends AppCompatActivity {
@@ -43,25 +44,52 @@ public class InfoPage extends AppCompatActivity {
     }
 
     public void populatePage() {
+        ImageView animalImage = findViewById(R.id.animalImageView);
+
+        TextView headerSpecies = findViewById(R.id.sectionHeader1);
+        TextView headerHabitat = findViewById(R.id.sectionHeader2);
+        TextView headerDiet = findViewById(R.id.sectionHeader3);
+        TextView headerPhysicalChars = findViewById(R.id.sectionHeader4);
+        TextView headerKnownFor = findViewById(R.id.sectionHeader5);
+        TextView headerIUCNCategory = findViewById(R.id.sectionHeader6);
+
+        headerSpecies.setText("Species Group");
+        headerHabitat.setText("Habitat");
+        headerDiet.setText("Diet");
+        headerPhysicalChars.setText("Physical Characteristics");
+        headerKnownFor.setText("Known For");
+        headerIUCNCategory.setText("IUCN Category");
+
         TextView animalNameText = findViewById(R.id.animalnameTextView);
         TextView animalSpeciesText = findViewById(R.id.animalinfo1TextView);
-        TextView animalHabitatText = findViewById(R.id.animalinfo2TextView);
-        TextView animalDietText = findViewById(R.id.animalinfo3TextView);
-        TextView animalPhysCharsText = findViewById(R.id.animalinfo4TextView);
+        TextView animalBloodedText = findViewById(R.id.animalinfo2TextView);
+        TextView animalVertInvertText = findViewById(R.id.animalinfo3TextView);
+        TextView animalHabitatText = findViewById(R.id.animalinfo4TextView);
+        TextView animalDietText = findViewById(R.id.animalinfo5TextView);
+        TextView animalPhysCharsText = findViewById(R.id.animalinfo6TextView);
+        TextView animalKnownForText = findViewById(R.id.animalinfo7TextView);
+        TextView animalIUCNCategoryText = findViewById(R.id.animalinfo8TextView);
+
 
         String path;
-
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             path = extras.getString("animalName");
             currentAnimal = new Animal(this, path);
         }
 
-        animalNameText.setText(currentAnimal.getName());
+       animalNameText.setText(currentAnimal.getName());
+        animalVertInvertText.setText(currentAnimal.getVertInvert());
         animalSpeciesText.setText(currentAnimal.getAnimalSpecies());
+        animalBloodedText.setText(currentAnimal.getBlooded());
         animalHabitatText.setText(currentAnimal.getAnimalHabitat());
         animalDietText.setText(currentAnimal.getAnimalDiet());
         animalPhysCharsText.setText(currentAnimal.getPhysChars());
+        animalKnownForText.setText(currentAnimal.getKnownFor());
+        animalIUCNCategoryText.setText(currentAnimal.getIUCNCategory());
+
+        animalImage.setImageDrawable(currentAnimal.getImage());
+
     }
 
     public void openSettingsPage(){
@@ -71,7 +99,24 @@ public class InfoPage extends AppCompatActivity {
     }
 
     public void openSearchPage(){
-        Intent intent = new Intent(this,SearchPage.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this,SearchPage.class);
+//        startActivity(intent);
+        String prevPage;
+        prevPage = "";
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            prevPage = extras.getString("whereFrom");
+        }
+
+        switch(prevPage){
+            case "imageSearch":
+                Intent intent = new Intent(this,ImageSearchPage.class);
+                startActivity(intent);
+                break;
+            case "textSearch":
+                Intent textSearch_intent = new Intent(this,SearchPage.class);
+                startActivity(textSearch_intent);
+        }
     }
 }
