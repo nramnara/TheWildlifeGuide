@@ -111,7 +111,9 @@ public class SearchPage extends AppCompatActivity {
 
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
-
+        searchView.setQueryHint("Type here to search");
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
