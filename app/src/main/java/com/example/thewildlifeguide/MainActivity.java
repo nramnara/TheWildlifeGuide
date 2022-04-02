@@ -2,6 +2,7 @@ package com.example.thewildlifeguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -20,12 +21,15 @@ public class MainActivity extends AppCompatActivity {
     private Button searchButton;
     private Button settingsButton;
     public static SettingsVariables settingsVariables;
+    private static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MainActivity.context = getApplicationContext();
 
         settingsVariables = new SettingsVariables();
 
@@ -81,5 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
     public View getView() {
         return findViewById(android.R.id.content).getRootView();
+    }
+
+    public static Context getAppContext() {
+        return MainActivity.context;
     }
 }

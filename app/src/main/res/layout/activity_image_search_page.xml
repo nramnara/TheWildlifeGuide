@@ -19,17 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
-    <TextView
-        android:id="@+id/imagesearchpageTitle1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="All animals (images)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/textsearchButton"
         android:layout_width="wrap_content"
@@ -43,23 +32,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imageSearch_recyclerView"
         android:layout_width="342dp"
-        android:layout_height="553dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagesearchpageTitle1"
-        app:layout_constraintVertical_bias="0.063" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Filter:"
-        app:layout_constraintEnd_toStartOf="@+id/imageSearch_spinner"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageSearch_spinner"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/imageSearch_spinner"
