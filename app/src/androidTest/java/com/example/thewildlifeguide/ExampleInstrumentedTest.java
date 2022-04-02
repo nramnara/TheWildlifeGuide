@@ -95,6 +95,4 @@ public void getAnimalList() {
     assertEquals(listOfAnimals, list.getListOfAnimals());
 
     }
-
-
 }
