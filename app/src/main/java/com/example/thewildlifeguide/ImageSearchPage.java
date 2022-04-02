@@ -7,10 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.Spinner;
 
 import java.sql.Array;
@@ -57,7 +62,7 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         /* Hides ActionBar at the top of the app */
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         //-------------------------------------
 
@@ -122,7 +127,7 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
 
     private void setAdapter() {
         setOnclickListener();
-        ImagePage_Adapter imagePageAdapter = new ImagePage_Adapter(this, animalNames, animalPics,listener);
+        this.imagePageAdapter = new ImagePage_Adapter(this, animalNames, animalPics,listener);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2,GridLayoutManager.VERTICAL,false);
         imageSearch.setLayoutManager(gridLayoutManager);
         imageSearch.setAdapter(imagePageAdapter);
@@ -148,6 +153,44 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
         Intent intent = new Intent(this,SettingsPage.class);
         startActivity(intent);
     }
+
+
+    //-----------------------------
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setQueryHint("Type here to search");
+
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                imagePageAdapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
+        return true;
+    }
+
+
+
+
+
+
+
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

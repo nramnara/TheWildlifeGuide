@@ -5,22 +5,27 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.ViewHolder> {
+public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.ViewHolder> implements Filterable {
 
     //initialize list of names and images,inflater and the listener
     List<String> animalNames;
     List<Drawable> images;
     LayoutInflater inflater;
     private RecyclerViewClickListener listener;
-
+    private List<String> animalList;
+    private ArrayList<String> animalListFull;
 
     //constructor
     public ImagePage_Adapter(Context ctx, List<String> animalNames, List<Drawable> images, RecyclerViewClickListener listener){
@@ -28,7 +33,45 @@ public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.Vi
         this.images = images;
         this.inflater = LayoutInflater.from(ctx);
         this.listener = listener;
+        this.animalList = animalNames;
+        this.animalListFull = new ArrayList<>(animalNames);
     }
+
+    @Override
+    public Filter getFilter() {
+        return animalFilter;
+    }
+
+    private Filter animalFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<String> filteredList = new ArrayList<>();
+
+            if(charSequence == null || charSequence.length() == 0) {
+                filteredList.addAll(animalListFull);
+            } else {
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+
+                for (String item: animalListFull) {
+                    if (item.toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults results) {
+            animalList.clear();
+            animalList.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
     //set variables to the image and textview for each animal
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -72,7 +115,5 @@ public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.Vi
 
     public interface RecyclerViewClickListener {
         void onClick(View v,int position);
-
     }
-
 }
