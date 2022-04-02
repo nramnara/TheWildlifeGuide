@@ -130,14 +130,24 @@ public class SettingsPage extends AppCompatActivity {
         Switch switchDarkMode = findViewById(R.id.darkMode);
         switchDarkMode.setText("Dark Mode");
 
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            System.out.println("YES");
+            switchDarkMode.setChecked(true);
+        } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO){
+            switchDarkMode.setChecked(false);
+            System.out.println("NO");
+        }
+
         switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    System.out.println("A");
                 }
                 else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    System.out.println("B");
                 }
             }
         });
