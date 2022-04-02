@@ -135,12 +135,13 @@ public class SettingsPage extends AppCompatActivity {
         buttonDarkMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (MainActivity.settingsVariables.getDarkMode() == false) {
-                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    MainActivity.settingsVariables.darkMode = true;
-                } else {
-                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                if (MainActivity.settingsVariables.getDarkMode() == true) {
                     MainActivity.settingsVariables.darkMode = false;
+                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+                } else {
+                    MainActivity.settingsVariables.darkMode = true;
+                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 }
             }
         });
