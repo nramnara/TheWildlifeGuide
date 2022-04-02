@@ -133,7 +133,7 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
             @Override
             public void onClick(View v, int position) {
                 Intent intent = new Intent(getApplicationContext(),InfoPage.class);
-                intent.putExtra("animalName",animalList.get(position));
+                intent.putExtra("animalName",animalNames.get(position));
                 intent.putExtra("whereFrom","imageSearch");
                 startActivity(intent);
             }
