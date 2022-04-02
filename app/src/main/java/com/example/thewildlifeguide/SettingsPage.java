@@ -111,6 +111,7 @@ public class SettingsPage extends AppCompatActivity {
     }
 
 
+
     public void setBackButton() {
 
         //set value to backButton
@@ -127,27 +128,19 @@ public class SettingsPage extends AppCompatActivity {
 
 
     public void setDarkModeSwitch() {
-        Switch switchDarkMode = findViewById(R.id.darkMode);
-        switchDarkMode.setText("Dark Mode");
+        Button buttonDarkMode = findViewById(R.id.darkModeButton);
+        buttonDarkMode.setText("Dark Mode");
 
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            System.out.println("YES");
-            switchDarkMode.setChecked(true);
-        } else{
-            switchDarkMode.setChecked(false);
-            System.out.println("NO");
-        }
-
-        switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        //what to do when the backButton is clicked
+        buttonDarkMode.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
+            public void onClick(View view) {
+                if (MainActivity.settingsVariables.getDarkMode() == false) {
                     getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    System.out.println("A");
-                }
-                else {
+                    MainActivity.settingsVariables.darkMode = true;
+                } else {
                     getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    System.out.println("B");
+                    MainActivity.settingsVariables.darkMode = false;
                 }
             }
         });
@@ -167,7 +160,7 @@ public class SettingsPage extends AppCompatActivity {
         switchHabitat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(switchHabitat.isChecked()) {
+                if (isChecked) {
                     MainActivity.settingsVariables.habitat = true;
                 } else {
                     MainActivity.settingsVariables.habitat = false;

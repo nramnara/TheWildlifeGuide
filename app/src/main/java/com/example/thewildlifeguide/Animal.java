@@ -37,11 +37,6 @@ public class Animal {
         setImage();
     }
 
-    public Animal AnimalTest(String path) {
-        parseText(path);
-        return this;
-    }
-
     /*
      Parses the text file using a BufferedReader, and stores each section in a String.
      */

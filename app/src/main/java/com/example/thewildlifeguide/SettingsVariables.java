@@ -10,6 +10,7 @@ public class SettingsVariables {
     public boolean knownFor = true;
     public boolean IUCN = true;
     public boolean similarAnimals = true;
+    public boolean darkMode = false;
 
     public boolean getHabitat() {
         return this.habitat;
@@ -33,5 +34,9 @@ public class SettingsVariables {
 
     public boolean getSimilarAnimals() {
         return this.similarAnimals;
+    }
+
+    public boolean getDarkMode() {
+        return this.darkMode;
     }
 }

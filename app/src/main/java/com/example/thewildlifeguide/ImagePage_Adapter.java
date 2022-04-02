@@ -29,6 +29,7 @@ public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.Vi
 
     public ArrayList<String> filteredNames;
 
+
     //constructor
     public ImagePage_Adapter(Context ctx, List<String> animalNames, List<Drawable> images, RecyclerViewClickListener listener){
         this.animalNames = animalNames;
