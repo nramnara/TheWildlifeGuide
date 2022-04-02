@@ -48,16 +48,40 @@ public class SettingsPage extends AppCompatActivity {
         String prevAnimalName;
         prevAnimalName = "";
 
+        //initialize what the previous search type was
+        String prevSearchType;
+        prevSearchType = "";
+
+        //initialize what the previous search page was
+        String prevSearchPage;
+        prevSearchPage = "";
+
         //check if an intent is thrown in here (is only possible if user comes from InfoPage), if so set the prev animal name to the string assigned to the key
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             prevAnimalName = extras.getString("fromInfo");
+            prevSearchType = extras.getString("searchType");
+            prevSearchPage = extras.getString("prevSearchPage");
         }
 
         //check if prevAnimalName was assigned anything, if so then the previous page must be an animal info page, send the user back to that specific animal page
         if (prevAnimalName.length() > 0){
             Intent intent = new Intent(this,InfoPage.class);
             intent.putExtra("animalName",prevAnimalName.toLowerCase()); //lowercase the animal name, since the file name is in all lowercase
+
+            //set the putExtra for 'whereFrom' to appropriate string value
+            //check if n-2 page was textSearch or imageSearch
+            //assign the "whereFrom", putExtra key to appropriate value
+            switch (prevSearchType)
+            {
+                case "imageSearch":
+                    intent.putExtra("whereFrom","imageSearch");
+                    break;
+                case "textSearch":
+                    intent.putExtra("whereFrom","textSearch");
+                    break;
+            }
+
             startActivity(intent);                                                       //ex. "Cat" -> "cat" since the name for the cats .txt file for cat is in all lowercase
         }
 
@@ -65,7 +89,24 @@ public class SettingsPage extends AppCompatActivity {
         else
         {
             Intent intent = new Intent(this,MainActivity.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(this,SearchPage.class);
+            Intent intent3 = new Intent(this,ImageSearchPage.class);
+
+            if (prevSearchPage.length() > 0)
+            {
+                if (prevSearchPage.equals("textSearch"))
+                {
+                    startActivity(intent2);
+                }
+                else
+                {
+                    startActivity(intent3);
+                }
+            }
+            else
+            {
+                startActivity(intent);
+            }
         }
     }
 
@@ -89,14 +130,25 @@ public class SettingsPage extends AppCompatActivity {
         Switch switchDarkMode = findViewById(R.id.darkMode);
         switchDarkMode.setText("Dark Mode");
 
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            System.out.println("YES");
+            switchDarkMode.setChecked(true);
+        } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO){
+            switchDarkMode.setChecked(false);
+            System.out.println("NO");
+
+        }
+
         switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    System.out.println("A");
                 }
                 else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    System.out.println("B");
                 }
             }
         });
@@ -220,7 +272,7 @@ public class SettingsPage extends AppCompatActivity {
 
 
     public void setSwitchSimilarAnimals() {
-        Switch switchSimilarAnimals = findViewById(R.id.textSwitch5);
+        Switch switchSimilarAnimals = findViewById(R.id.textSwitch6);
         switchSimilarAnimals.setText("Similar Animals");
 
         if (MainActivity.settingsVariables.similarAnimals == false) {

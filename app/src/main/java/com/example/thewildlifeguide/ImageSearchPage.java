@@ -157,15 +157,20 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
         {
             AnimalList temp_list = new AnimalList(this);
             ArrayList<String> temp_animalList = temp_list.getListOfAnimals();
+            ArrayList<Drawable> allAnimals_pics = new ArrayList<>();
             ArrayList<String> allAnimals = new ArrayList<>();
 
-            for (int j = 0;j < temp_animalList.size();j++)
+
+            animalList = temp_animalList;//BUG: it removes it, but doesn't update the view
+
+            for (int n = 0; n < animalList.size();n++)
             {
-                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
-                allAnimals.add(currentAnimal.getName().toLowerCase());
+                Animal currentAnimal = new Animal(this, animalList.get(n));
+                allAnimals_pics.add(currentAnimal.getImage());
             }
 
-            animalList = allAnimals;//BUG: it removes it, but doesn't update the view
+            animalPics = allAnimals_pics;
+            animalNames = animalList;
             setAdapter(); //after making changes to animalList, call this method after, so the view is changed
         }
 

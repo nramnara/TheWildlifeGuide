@@ -9,6 +9,20 @@
     android:background="@color/background_color">
 
     <Switch
+        android:id="@+id/textSwitch6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="Animal switch 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSwitch5" />
+
+    <Switch
         android:id="@+id/textSwitch4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
