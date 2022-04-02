@@ -136,7 +136,6 @@ public class SettingsPage extends AppCompatActivity {
         } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO){
             switchDarkMode.setChecked(false);
             System.out.println("NO");
-
         }
 
         switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -152,7 +151,6 @@ public class SettingsPage extends AppCompatActivity {
                 }
             }
         });
-
     }
 
 
