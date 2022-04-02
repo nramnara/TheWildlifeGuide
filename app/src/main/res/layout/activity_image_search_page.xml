@@ -23,7 +23,7 @@
         android:id="@+id/imagesearchpageTitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="68dp"
         android:text="All animals (images)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -44,9 +44,12 @@
         android:id="@+id/imageSearch_recyclerView"
         android:layout_width="342dp"
         android:layout_height="553dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagesearchpageTitle1" />
+        app:layout_constraintTop_toBottomOf="@+id/imagesearchpageTitle1"
+        app:layout_constraintVertical_bias="0.063" />
 
     <TextView
         android:id="@+id/textView"
