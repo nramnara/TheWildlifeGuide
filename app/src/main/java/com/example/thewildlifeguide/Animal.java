@@ -26,6 +26,8 @@ public class Animal {
 
     private Drawable image;
 
+    private Animal testAnimal;
+
 
     /*
    Constructor. Calls parseText(String) method to move text from the document
@@ -37,9 +39,14 @@ public class Animal {
         setImage();
     }
 
-    public Animal AnimalTest(String path) {
+    public Animal (String path) {
         parseText(path);
-        return this;
+        testAnimal = this;
+        animalTest();
+    }
+
+    public Animal animalTest() {
+        return testAnimal;
     }
 
     /*
@@ -184,7 +191,7 @@ public class Animal {
     /*
     Prints the Animal to console.
      */
-    public void printTraits() {
+    public String printTraits() {
         System.out.println("Name: " + this.name);
         System.out.println("Vertebrate/Invertebrate: " + this.vertInvert);
         System.out.println("Species: " + this.species);
@@ -195,5 +202,14 @@ public class Animal {
         System.out.println("Known For: " + this.knownFor);
         System.out.println("IUCN Red List Category: " + this.IUCN);
         System.out.println("Similar Animals: " + this.similar);
+
+        String returnValue = "Name: " + this.name+  "| Vertebrate/Invertebrate: " + this.vertInvert+
+                "| Species: " + this.species+ "| Cold/Warm blooded: " + this.blooded+ "| Habitat: " + this.habitat+
+                "| Diet: " + this.diet+ "| Physical Characteristics: " + this.physicalCharacteristics+
+                "| Known For: " + this.knownFor+ "| IUCN Red List Category: " + this.IUCN+
+                "| Similar Animals: " + this.similar+ "";
+
+        return returnValue;
+
     }
 }
