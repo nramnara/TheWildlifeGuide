@@ -21,7 +21,7 @@ import java.util.ArrayList;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+public class TheWildlifeGuideInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
@@ -43,6 +43,7 @@ public void getAnimalTraits_01() {
             "The northwestern crow nests mainly in coniferous trees; the American crow, in deciduous and coniferous trees and, occasionally, in low bushes.", animal.getAnimalHabitat());
     assertEquals("Warm-blooded", animal.getBlooded());
     assertEquals("LC - Least Concern", animal.getIUCNCategory());
+    assertEquals("Eagle; Peacock; Penguin;", animal.getSimilarAnimals());
     }
 
     @Test
@@ -57,6 +58,7 @@ public void getAnimalTraits_02() {
         assertEquals("Warm-blooded", animal.getBlooded());
         assertEquals("CR - Critically Endangered. " +
                 "This means they are considered to be facing an extremely high risk of extinction.", animal.getIUCNCategory());
+        assertEquals("Cat; Tiger;", animal.getSimilarAnimals());
     }
 
     @Test
@@ -69,7 +71,7 @@ public void getAnimalTraits_03() {
         assertEquals("VU - Vulnerable", animal.getIUCNCategory());
         assertEquals("Zebra;", animal.getSimilarAnimals());
         assertEquals("Reindeer are known around the world as the fictional sidekicks of Santa Claus.", animal.getKnownFor());
-
+        assertEquals("Zebra;", animal.getSimilarAnimals());
     }
 
     @Test
