@@ -12,12 +12,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SearchView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
-public class SearchPage extends AppCompatActivity {
+public class SearchPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     //initialize the image search button
     private Button imageSearchButton;
@@ -53,7 +56,13 @@ public class SearchPage extends AppCompatActivity {
 
         getSupportActionBar().setTitle("ALL ANIMALS");
         //-------------------------------------
+        Spinner spinner = findViewById(R.id.spinner1);
+        ArrayAdapter<CharSequence> dropdownAdapter = ArrayAdapter.createFromResource(this,R.array.numbers,android.R.layout.simple_spinner_item);
+        dropdownAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dropdownAdapter);
 
+        spinner.setOnItemSelectedListener(this);
+        //------------------------------------
         settingsButton = (Button) findViewById(R.id.SearchPageSettings_button);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,5 +152,89 @@ public class SearchPage extends AppCompatActivity {
         });
 
         return true;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        //check which button is clicked using adapterView.getItemAtPosition
+        //sort the list: animalList accordingly based on what option was selected above
+        String filter = adapterView.getItemAtPosition(i).toString();
+
+        //implement animalList sorting here, note that filter = itemname found in strings.xml, <item>itemname</item>
+        if (filter.equals("Vertebrates"))
+        {
+            AnimalList temp_list;
+            ArrayList<String> temp_animalList;
+
+            temp_list = new AnimalList(this);
+            temp_animalList = temp_list.getListOfAnimals();
+
+            ArrayList<String> vertebrates = new ArrayList<>();
+
+            for (int j = 0;j < temp_animalList.size();j++)
+            {
+                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
+
+                if (currentAnimal.getVertInvert().equals("Vertebrate"))
+                {
+                    vertebrates.add(currentAnimal.getName().toLowerCase());
+                }
+            }
+            animalList = vertebrates;//BUG: it removes it, but doesn't update the view
+            setSearchPageAdapter(); //after making changes to animalList, call this method after, so the view is changed
+        }
+
+        if (filter.equals("Mammals"))
+        {
+            AnimalList temp_list;
+            ArrayList<String> temp_animalList;
+
+            temp_list = new AnimalList(this);
+            temp_animalList = temp_list.getListOfAnimals();
+
+            ArrayList<String> mammals = new ArrayList<>();
+            for (int j = 0;j < temp_animalList.size();j++)
+            {
+                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
+
+                if (currentAnimal.getAnimalSpecies().equals("Mammal"))
+                {
+                    mammals.add(currentAnimal.getName().toLowerCase());
+                }
+            }
+            animalList = mammals;//BUG: it removes it, but doesn't update the view
+            setSearchPageAdapter(); //after making changes to animalList, call this method after, so the view is changed
+
+        }
+
+        if (filter.equals("Cold-Blooded"))
+        {
+            AnimalList temp_list;
+            ArrayList<String> temp_animalList;
+
+            temp_list = new AnimalList(this);
+            temp_animalList = temp_list.getListOfAnimals();
+
+            ArrayList<String> coldBlooded = new ArrayList<>();
+
+            for (int j = 0;j < temp_animalList.size();j++)
+            {
+                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
+
+                if (currentAnimal.getBlooded().equals("Cold-blooded"))
+                {
+                    coldBlooded.add(currentAnimal.getName().toLowerCase());
+                }
+            }
+            animalList = coldBlooded;//BUG: it removes it, but doesn't update the view
+            setSearchPageAdapter(); //after making changes to animalList, call this method after, so the view is changed
+
+        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
