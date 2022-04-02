@@ -5,7 +5,7 @@ Vert Invert
 Vertebrate
 #####
 Species
-Mammals
+Mammal
 #####
 Blooded
 Warm-blooded
@@ -24,7 +24,7 @@ Known For
 Nicknamed 'King of Beasts', lions are one of the best known wild animals
 #####
 IUCN Category
-CR - Critically Endangered. 
+CR - Critically Endangered.
 This means they are considered to be facing an extremely high risk of extinction.
 #####
 Similar Animals

@@ -38,10 +38,11 @@ public void getAnimalTraits_01() {
 
     assertEquals("Vertebrate", animal.getVertInvert());
     assertEquals("Bird", animal.getAnimalSpecies());
-    assertEquals("Both northwestern and American crows tend to forage in open areas but prefer wooded habitats for nesting and roosting." +
+    System.out.println(animal.getAnimalHabitat());
+    assertEquals("Both northwestern and American crows tend to forage in open areas but prefer wooded habitats for nesting and roosting. " +
             "The northwestern crow nests mainly in coniferous trees; the American crow, in deciduous and coniferous trees and, occasionally, in low bushes.", animal.getAnimalHabitat());
-//    assertEquals("Warm-blooded", animal.getBlooded());
-//    assertEquals("LC - Least Concern", animal.getIUCNCategory());
+    assertEquals("Warm-blooded", animal.getBlooded());
+    assertEquals("LC - Least Concern", animal.getIUCNCategory());
     }
 
     @Test
@@ -54,7 +55,8 @@ public void getAnimalTraits_02() {
         assertEquals("Mammal", animal.getAnimalSpecies());
         assertEquals("Lions live in a variety of habitats but prefer grassland, savanna, dense scrub, and open woodland.", animal.getAnimalHabitat());
         assertEquals("Warm-blooded", animal.getBlooded());
-        assertEquals("CR - Critically Endangered. This means they are considered to be facing an extremely high risk of extinction.", animal.getIUCNCategory());
+        assertEquals("CR - Critically Endangered. " +
+                "This means they are considered to be facing an extremely high risk of extinction.", animal.getIUCNCategory());
     }
 
     @Test
@@ -70,53 +72,29 @@ public void getAnimalTraits_03() {
 
     }
 
-//    @Test
-//public void getAnimalSummary() {
-//        Animal animal = new Animal(InstrumentationRegistry.getInstrumentation().getTargetContext(), "human");
-//        String expected = ("Name: Human" +
-//                "| Vertebrate/Invertebrate: Vertebrate" +
-//                "| Species: Mammal" +
-//                "| Cold/Warm blooded: Warm-blooded" +
-//                "| Habitat: Humans are terrestrial animals." +
-//                "Most human habitats are in the same sorts of places as animal habitats, like forests and grasslands, but humans and animals live in very different kinds of shelters." +
-//                "They can usually build or find what they need in order to live almost anywhere in the whole world." +
-//                "| Diet: Humans are omnivores." +
-//                "People eat plants, such as vegetables and fruits." +
-//                "They eat animals, cooked as meat or used for products like milk or eggs." +
-//                "| Physical Characteristics: Human beings display a marked erectness of body carriage that frees the hands for use as manipulative members." +
-//                "Reproductive organs depend on sex; and the females have mammary glands specifically for lactation." +
-//                "| Known For: Humans are known (by humans) to have big and complex brains and superior intellectual and emotional intelligence." +
-//                "| IUCN Red List Category: LC - Least Concern" +
-//                "| Similar Animals: Unique Animal");
-//
-//        assertEquals(expected, animal.printTraits());
-//
-//    }
-//
+    @Test
+public void getAnimalList() {
+        AnimalList list = new AnimalList(InstrumentationRegistry.getInstrumentation().getTargetContext());
+        ArrayList<String> listOfAnimals = new ArrayList<>();
 
-//    @Test
-//public void getAnimalList() {
-//        AnimalList list = new AnimalList(InstrumentationRegistry.getInstrumentation().getTargetContext());
-//        ArrayList<String> listOfAnimals = new ArrayList<>();
-//
-//    AssetManager assetManager = InstrumentationRegistry.getInstrumentation().getTargetContext().getAssets();
-//
-//    try {
-//        String[] files = assetManager.list("");
-//
-//        for (int i = 0; i < files.length; i++) {
-//            if (!files[i].equals("images") && !files[i].equals("webkit")) {
-//                listOfAnimals.add(files[i].substring(0, files[i].length() - 4));
-//            }
-//        }
-//
-//    } catch (IOException e){
-//        System.out.println(e);
-//    }
-//
-//    assertEquals(listOfAnimals, list.getListOfAnimals());
-//
-//    }
+    AssetManager assetManager = InstrumentationRegistry.getInstrumentation().getTargetContext().getAssets();
+
+    try {
+        String[] files = assetManager.list("");
+
+        for (int i = 0; i < files.length; i++) {
+            if (!files[i].equals("images") && !files[i].equals("webkit")) {
+                listOfAnimals.add(files[i].substring(0, files[i].length() - 4));
+            }
+        }
+
+    } catch (IOException e){
+        System.out.println(e);
+    }
+
+    assertEquals(listOfAnimals, list.getListOfAnimals());
+
+    }
 
 
 }
