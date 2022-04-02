@@ -169,13 +169,8 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
             ArrayList<String> temp_animalList = temp_list.getListOfAnimals();
             ArrayList<String> allAnimals = new ArrayList<>();
 
-            for (int j = 0;j < temp_animalList.size();j++)
-            {
-                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
-                allAnimals.add(currentAnimal.getName().toLowerCase());
-            }
 
-            animalList = allAnimals;//BUG: it removes it, but doesn't update the view
+            animalList = temp_animalList;//BUG: it removes it, but doesn't update the view
             setSearchPageAdapter(); //after making changes to animalList, call this method after, so the view is changed
         }
 
