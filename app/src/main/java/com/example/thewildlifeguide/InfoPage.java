@@ -83,19 +83,50 @@ public class InfoPage extends AppCompatActivity {
             currentAnimal = new Animal(this, path);
         }
 
-       animalNameText.setText(currentAnimal.getName());
+
+        animalNameText.setText(currentAnimal.getName());
         animalVertInvertText.setText(currentAnimal.getVertInvert());
         animalSpeciesText.setText(currentAnimal.getAnimalSpecies());
         animalBloodedText.setText(currentAnimal.getBlooded());
-        animalHabitatText.setText(currentAnimal.getAnimalHabitat());
-        animalDietText.setText(currentAnimal.getAnimalDiet());
-        animalPhysCharsText.setText(currentAnimal.getPhysChars());
-        animalKnownForText.setText(currentAnimal.getKnownFor());
-        animalIUCNCategoryText.setText(currentAnimal.getIUCNCategory());
-        animalSimilarAnimalsText.setText(currentAnimal.getSimilarAnimals());
+
+        if(MainActivity.settingsVariables.getHabitat() == true) {
+            animalHabitatText.setText(currentAnimal.getAnimalHabitat());
+        } else {
+            animalHabitatText.setVisibility(View.GONE);
+        }
+
+        if(MainActivity.settingsVariables.getDiet() == true) {
+            animalDietText.setText(currentAnimal.getAnimalDiet());
+        } else {
+            animalDietText.setVisibility(View.GONE);
+        }
+
+        if(MainActivity.settingsVariables.getPhysChars() == true) {
+            animalPhysCharsText.setText(currentAnimal.getPhysChars());
+        } else {
+            animalPhysCharsText.setVisibility(View.GONE);
+        }
+
+        if(MainActivity.settingsVariables.getKnownFor() == true) {
+            animalKnownForText.setText(currentAnimal.getKnownFor());
+        } else {
+            animalKnownForText.setVisibility(View.GONE);
+        }
+
+        if(MainActivity.settingsVariables.getIUCN() == true) {
+            animalIUCNCategoryText.setText(currentAnimal.getIUCNCategory());
+        } else {
+            animalIUCNCategoryText.setVisibility(View.GONE);
+        }
+
+        if(MainActivity.settingsVariables.getSimilarAnimals() == true) {
+            animalSimilarAnimalsText.setText(currentAnimal.getSimilarAnimals());
+        } else {
+            animalSimilarAnimalsText.setVisibility(View.GONE);
+        }
+
 
         animalImage.setImageDrawable(currentAnimal.getImage());
-
     }
 
     public void openSettingsPage(){

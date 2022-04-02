@@ -38,10 +38,13 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
     //initialize the search page's recyclerView's click listener
     private SearchPage_recyclerAdapter.searchpage_RecyclerViewClickListener listener;
 
+    private SettingsVariables settingsVariables;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_page);
+
 
         //-------------------------------------
 
@@ -236,5 +239,20 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+
+
+    public void getExtras() {
+        Bundle extras = getIntent().getExtras();
+        System.out.println("1");
+
+        if (extras != null)
+        {
+            settingsVariables = extras.getParcelable("settingsVariables");
+        }
+
+        //settingsVariables.getHabitat();
+        System.out.println(settingsVariables.getHabitat());
     }
 }
