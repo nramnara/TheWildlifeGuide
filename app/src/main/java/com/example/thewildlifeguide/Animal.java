@@ -3,7 +3,6 @@ package com.example.thewildlifeguide;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.widget.Filter;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +12,6 @@ import java.util.Locale;
 
 public class Animal {
 
-    private Filter filter;
     private Context context;
     private String name = "";
     private String vertInvert = "";
@@ -33,11 +31,15 @@ public class Animal {
    Constructor. Calls parseText(String) method to move text from the document
    into the correct Strings.
     */
-
     public Animal(Context context, String path) {
         this.context = context;
         parseText(path);
         setImage();
+    }
+
+    public Animal AnimalTest(String path) {
+        parseText(path);
+        return this;
     }
 
     /*
