@@ -33,6 +33,7 @@ public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.Vi
         this.images = images;
         this.inflater = LayoutInflater.from(ctx);
         this.listener = listener;
+
         this.animalList = animalNames;
         this.animalListFull = new ArrayList<>(animalNames);
     }
