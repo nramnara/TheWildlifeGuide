@@ -48,16 +48,40 @@ public class SettingsPage extends AppCompatActivity {
         String prevAnimalName;
         prevAnimalName = "";
 
+        //initialize what the previous search type was
+        String prevSearchType;
+        prevSearchType = "";
+
+        //initialize what the previous search page was
+        String prevSearchPage;
+        prevSearchPage = "";
+
         //check if an intent is thrown in here (is only possible if user comes from InfoPage), if so set the prev animal name to the string assigned to the key
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             prevAnimalName = extras.getString("fromInfo");
+            prevSearchType = extras.getString("searchType");
+            prevSearchPage = extras.getString("prevSearchPage");
         }
 
         //check if prevAnimalName was assigned anything, if so then the previous page must be an animal info page, send the user back to that specific animal page
         if (prevAnimalName.length() > 0){
             Intent intent = new Intent(this,InfoPage.class);
             intent.putExtra("animalName",prevAnimalName.toLowerCase()); //lowercase the animal name, since the file name is in all lowercase
+
+            //set the putExtra for 'whereFrom' to appropriate string value
+            //check if n-2 page was textSearch or imageSearch
+            //assign the "whereFrom", putExtra key to appropriate value
+            switch (prevSearchType)
+            {
+                case "imageSearch":
+                    intent.putExtra("whereFrom","imageSearch");
+                    break;
+                case "textSearch":
+                    intent.putExtra("whereFrom","textSearch");
+                    break;
+            }
+
             startActivity(intent);                                                       //ex. "Cat" -> "cat" since the name for the cats .txt file for cat is in all lowercase
         }
 
@@ -65,7 +89,24 @@ public class SettingsPage extends AppCompatActivity {
         else
         {
             Intent intent = new Intent(this,MainActivity.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(this,SearchPage.class);
+            Intent intent3 = new Intent(this,ImageSearchPage.class);
+
+            if (prevSearchPage.length() > 0)
+            {
+                if (prevSearchPage.equals("textSearch"))
+                {
+                    startActivity(intent2);
+                }
+                else
+                {
+                    startActivity(intent3);
+                }
+            }
+            else
+            {
+                startActivity(intent);
+            }
         }
     }
 
