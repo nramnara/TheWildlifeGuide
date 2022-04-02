@@ -100,6 +100,7 @@ public class SearchPage extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
                 Intent intent = new Intent(getApplicationContext(),InfoPage.class);
+                intent.putExtra("whereFrom","textSearch");
                 intent.putExtra("animalName",animalList.get(position));
                 startActivity(intent);
             }

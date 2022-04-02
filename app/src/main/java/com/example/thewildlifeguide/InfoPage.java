@@ -15,6 +15,8 @@ public class InfoPage extends AppCompatActivity {
     private Button backButton;
     private Animal currentAnimal;
 
+    public static String InfoPage_prev;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,11 +101,44 @@ public class InfoPage extends AppCompatActivity {
     public void openSettingsPage(){
         Intent intent = new Intent(this,SettingsPage.class);
         intent.putExtra("fromInfo",currentAnimal.getName());
+
+        String prevPage;
+        prevPage = "";
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            prevPage = extras.getString("whereFrom");
+        }
+
+        //send what search page was used to display the current infoPage
+        switch(prevPage) {
+            case "imageSearch":
+                intent.putExtra("searchType","imageSearch");
+                break;
+            case "textSearch":
+                intent.putExtra("searchType","textSearch");
+                break;
+        }
         startActivity(intent);
     }
 
     public void openSearchPage(){
-        Intent intent = new Intent(this,SearchPage.class);
-        startActivity(intent);
+        String prevPage;
+        prevPage = "";
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            prevPage = extras.getString("whereFrom");
+        }
+
+        switch(prevPage){
+            case "imageSearch":
+                Intent intent = new Intent(this,ImageSearchPage.class);
+                startActivity(intent);
+                break;
+            case "textSearch":
+                Intent textSearch_intent = new Intent(this,SearchPage.class);
+                startActivity(textSearch_intent);
+        }
     }
 }
