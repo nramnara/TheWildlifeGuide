@@ -5,7 +5,7 @@ Vert Invert
 Vertebrate
 #####
 Species
-Amphibians
+Amphibian
 #####
 Blooded
 Cold-blooded
@@ -26,7 +26,7 @@ Frogs are known for the large distances they jump and their croaking sound.
 #####
 IUCN Category
 LC - Least Concern.
-Though some are categorized as VU - vulnerable
+Though some are categorized as VU - vulnerable.
 #####
 Similar Animals
 Unique Animal
