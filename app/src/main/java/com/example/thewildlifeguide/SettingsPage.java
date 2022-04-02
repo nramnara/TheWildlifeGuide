@@ -133,7 +133,6 @@ public class SettingsPage extends AppCompatActivity {
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             System.out.println("YES");
             switchDarkMode.setChecked(true);
-            //if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO)
         } else{
             switchDarkMode.setChecked(false);
             System.out.println("NO");
@@ -143,7 +142,6 @@ public class SettingsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
-
                     getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     System.out.println("A");
                 }
