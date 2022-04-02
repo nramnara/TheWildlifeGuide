@@ -261,7 +261,7 @@ public class SettingsPage extends AppCompatActivity {
 
 
     public void setSwitchSimilarAnimals() {
-        Switch switchSimilarAnimals = findViewById(R.id.textSwitch5);
+        Switch switchSimilarAnimals = findViewById(R.id.textSwitch6);
         switchSimilarAnimals.setText("Similar Animals");
 
         if (MainActivity.settingsVariables.similarAnimals == false) {
