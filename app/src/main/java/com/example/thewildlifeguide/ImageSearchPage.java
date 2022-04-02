@@ -8,12 +8,16 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImageSearchPage extends AppCompatActivity {
+public class ImageSearchPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     //initialize the recyclerView
     RecyclerView imageSearch;
@@ -57,6 +61,14 @@ public class ImageSearchPage extends AppCompatActivity {
 
         //-------------------------------------
 
+        Spinner spinner = findViewById(R.id.imageSearch_spinner);
+        ArrayAdapter<CharSequence> dropdownAdapter = ArrayAdapter.createFromResource(this,R.array.numbers,android.R.layout.simple_spinner_item);
+        dropdownAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dropdownAdapter);
+
+        spinner.setOnItemSelectedListener(this);
+
+        //--------------
         //set the array to animalsList
         list = new AnimalList(this);
         animalList = list.getListOfAnimals();
@@ -135,5 +147,99 @@ public class ImageSearchPage extends AppCompatActivity {
     public void openSettingsPage(){
         Intent intent = new Intent(this,SettingsPage.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String filter = adapterView.getItemAtPosition(i).toString();
+
+        if (filter.equals("Vertebrates"))
+        {
+
+            AnimalList temp_list;
+            ArrayList<String> temp_animalList;
+
+            temp_list = new AnimalList(this);
+            temp_animalList = temp_list.getListOfAnimals();
+
+            ArrayList<String> vertebrates = new ArrayList<>();
+            ArrayList<Drawable> vertebrates_pics = new ArrayList<>();
+
+            for (int j = 0;j < temp_animalList.size();j++)
+            {
+                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
+
+                if (currentAnimal.getVertInvert().equals("Vertebrate"))
+                {
+                    vertebrates.add(currentAnimal.getName().toLowerCase());
+                    vertebrates_pics.add(currentAnimal.getImage());
+                }
+            }
+            animalNames = vertebrates;//BUG: it removes it, but doesn't update the view
+            animalPics = vertebrates_pics;
+
+            setAdapter(); //after making changes to animalList, call this method after, so the view is changed
+        }
+
+        if (filter.equals("Mammals"))
+        {
+            AnimalList temp_list;
+            ArrayList<String> temp_animalList;
+
+            temp_list = new AnimalList(this);
+            temp_animalList = temp_list.getListOfAnimals();
+
+            ArrayList<String> mammals = new ArrayList<>();
+            ArrayList<Drawable> mammalsPics = new ArrayList<>();
+
+            for (int j = 0;j < temp_animalList.size();j++)
+            {
+                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
+
+                if (currentAnimal.getAnimalSpecies().equals("Mammal"))
+                {
+                    mammals.add(currentAnimal.getName().toLowerCase());
+                    mammalsPics.add(currentAnimal.getImage());
+                }
+            }
+            animalPics = mammalsPics;
+            animalNames = mammals;//BUG: it removes it, but doesn't update the view
+            setAdapter(); //after making changes to animalList, call this method after, so the view is changed
+
+        }
+
+        if (filter.equals("Cold-Blooded"))
+        {
+            AnimalList temp_list;
+            ArrayList<String> temp_animalList;
+
+            temp_list = new AnimalList(this);
+            temp_animalList = temp_list.getListOfAnimals();
+
+            ArrayList<String> coldBlooded = new ArrayList<>();
+            ArrayList<Drawable> coldBlooded_pics = new ArrayList<>();
+
+
+            for (int j = 0;j < temp_animalList.size();j++)
+            {
+                Animal currentAnimal = new Animal(this,temp_animalList.get(j));
+
+                if (currentAnimal.getBlooded().equals("Cold-blooded"))
+                {
+                    coldBlooded.add(currentAnimal.getName().toLowerCase());
+                    coldBlooded_pics.add(currentAnimal.getImage());
+                }
+            }
+            animalPics = coldBlooded_pics;
+            animalNames = coldBlooded;//BUG: it removes it, but doesn't update the view
+            setAdapter(); //after making changes to animalList, call this method after, so the view is changed
+
+        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
