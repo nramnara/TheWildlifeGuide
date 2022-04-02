@@ -3,6 +3,7 @@
     <string name="appName">The Wildlife Guide</string>
 
     <string-array name = "numbers">
+        <item>All Animals</item>
         <item>Vertebrates</item>
         <item>Mammals</item>
         <item>Cold-Blooded</item>
