@@ -27,6 +27,8 @@ public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.Vi
     private List<String> animalList;
     private ArrayList<String> animalListFull;
 
+    public ArrayList<String> filteredNames;
+
     //constructor
     public ImagePage_Adapter(Context ctx, List<String> animalNames, List<Drawable> images, RecyclerViewClickListener listener){
         this.animalNames = animalNames;
@@ -62,14 +64,26 @@ public class ImagePage_Adapter extends RecyclerView.Adapter<ImagePage_Adapter.Vi
 
             FilterResults results = new FilterResults();
             results.values = filteredList;
+            filteredNames = new ArrayList<>(filteredList);
 
             return results;
         }
 
         @Override
         protected void publishResults(CharSequence charSequence, FilterResults results) {
+
             animalList.clear();
-            animalList.addAll((List) results.values);
+            images.clear();
+            animalList.addAll(filteredNames);
+
+            ArrayList<Drawable> filteredImages = new ArrayList<>();
+
+            for (int i = 0; i < animalList.size(); i ++)
+            {
+                Animal animal = new Animal(MainActivity.getAppContext(),animalList.get(i));
+                filteredImages.add(animal.getImage());
+            }
+            images.addAll(filteredImages);
             notifyDataSetChanged();
         }
     };
