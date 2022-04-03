@@ -2,8 +2,6 @@ package com.example.thewildlifeguide;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.graphics.drawable.Drawable;
-import android.widget.Filter;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -15,8 +13,6 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 
 /**
@@ -100,67 +96,5 @@ public void getAnimalList() {
 
     }
 
-    //Testing: ImagePage_Adapter
-
-    @Test
-    public void test_ImagePage_Adapter_filter () {
-
-        AnimalList list;
-        ArrayList<String> animalList;
-        ArrayList<String> animalListFull;
-        ArrayList<Drawable> images;
-
-        list = new AnimalList(InstrumentationRegistry.getInstrumentation().getTargetContext());
-        animalList = list.getListOfAnimals();
-        animalListFull = new ArrayList<>(animalList);
-        images = new ArrayList<>();
-
-        ArrayList<String> expectedAnimalList;
-        ArrayList<Drawable>expectedAnimalPics;
-
-        for (int i = 0; i < animalListFull.size(); i++) {
-            Animal animal = new Animal(InstrumentationRegistry.getInstrumentation().getTargetContext(), animalListFull.get(i));
-        }
-        Filter animalFilter = new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence charSequence) {
-                List<String> filteredList = new ArrayList<>();
-
-                if (charSequence == null || charSequence.length() == 0) {
-                    filteredList.addAll(animalListFull);
-                } else {
-                    String filterPattern = charSequence.toString().toLowerCase().trim();
-
-                    for (String item : animalListFull) {
-                        if (item.toLowerCase().contains(filterPattern)) {
-                            filteredList.add(item);
-                        }
-                    }
-                }
-
-                FilterResults results = new FilterResults();
-                results.values = filteredList;
-                return results;
-            }
-
-            @Override
-            protected void publishResults(CharSequence charSequence, FilterResults results) {
-                List<String> filteredList = new ArrayList<>();
-                filteredList = (List)results.values;
-                final ArrayList<String> filteredNames = new ArrayList<>(filteredList);
-                animalList.clear();
-                images.clear();
-                animalList.addAll(filteredNames);
-
-                ArrayList<Drawable> filteredImages = new ArrayList<>();
-
-                for (int i = 0; i < animalList.size(); i++) {
-                    Animal animal = new Animal(MainActivity.getAppContext(), animalList.get(i));
-                    filteredImages.add(animal.getImage());
-                }
-                images.addAll(filteredImages);
-            }
-        };
-    }
 
 }

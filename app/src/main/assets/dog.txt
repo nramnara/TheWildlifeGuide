@@ -15,11 +15,11 @@ As terrestrial animals, dogs live in all kinds of habitats.
 They range from prairies and deserts to rain forests to the arctic region.
 #####
 Diet
-Meat makes up the majority of dogs' diet. 
-However, they also can and do eat plants.   
+Meat makes up the majority of dogs' diet.
+However, they also can and do eat plants.
 #####
 Physical Characteristics
-Although it differs, in general, dogs have four legs and acute senses. 
+Although it differs, in general, dogs have four legs and acute senses.
 #####
 Known For
 Dogs are popular pets, and some are even trained to help humans do certain kinds of work.
@@ -29,6 +29,5 @@ LC - Least Concern
 #####
 Similar Animals
 Cat;
-
 #####
 $$$$$END$$$$$
