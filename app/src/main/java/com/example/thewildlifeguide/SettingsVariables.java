@@ -11,6 +11,7 @@ public class SettingsVariables {
     public boolean IUCN = true;
     public boolean similarAnimals = true;
     public boolean darkMode = false;
+    public String page = "Home";
 
     public boolean getHabitat() {
         return this.habitat;
@@ -38,5 +39,9 @@ public class SettingsVariables {
 
     public boolean getDarkMode() {
         return this.darkMode;
+    }
+
+    public String getPage() {
+        return this.page;
     }
 }
