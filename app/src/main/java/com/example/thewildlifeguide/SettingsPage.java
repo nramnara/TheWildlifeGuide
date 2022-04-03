@@ -95,15 +95,12 @@ public class SettingsPage extends AppCompatActivity {
             switch (MainActivity.settingsVariables.page)
             {
                 case "textSearch":
-                    //System.out.println("textPage");
                     startActivity(intent2);
                     break;
                 case "imageSearch":
-                    //System.out.println("imagePage");
                     startActivity(intent3);
                     break;
                 default:
-                    //System.out.println("homePage");
                     startActivity(intent);
             }
 

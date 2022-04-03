@@ -49,15 +49,6 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
         MainActivity.settingsVariables.page = "textSearch";
         //-------------------------------------
 
-        /* Hides the bar at the top of phone */
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        /* Hides ActionBar at the top of the app */
-        //getSupportActionBar().hide();
-        //getActionBar().setDisplayShowTitleEnabled(false);
-        //getActionBar().setTitle("All Animals");
-
         getSupportActionBar().setTitle("ALL ANIMALS");
         //-------------------------------------
         Spinner spinner = findViewById(R.id.spinner1);
@@ -98,7 +89,6 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
     private void setSearchPageAdapter() {
         setOnClickListener();
 
-        //SearchPage_recyclerAdapter adapter = new SearchPage_recyclerAdapter(this.animalList,listener);
         adapter = new SearchPage_recyclerAdapter(this.animalList,listener);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -264,7 +254,6 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
             settingsVariables = extras.getParcelable("settingsVariables");
         }
 
-        //settingsVariables.getHabitat();
         System.out.println(settingsVariables.getHabitat());
     }
 }
