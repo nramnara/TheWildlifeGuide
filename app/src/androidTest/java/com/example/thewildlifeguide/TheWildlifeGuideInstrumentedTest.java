@@ -30,6 +30,11 @@ public class TheWildlifeGuideInstrumentedTest {
     }
 
 
+
+
+    /*
+    Tests for Animal to see if the animal loads correctly from the text files.
+     */
     @Test
 public void getAnimalTraits_01() {
     Animal animal = new Animal( InstrumentationRegistry.getInstrumentation().getTargetContext(), "crow");
@@ -72,6 +77,10 @@ public void getAnimalTraits_03() {
 
     }
 
+
+    /*
+    Test to create an Animal List
+     */
     @Test
 public void getAnimalList() {
         AnimalList list = new AnimalList(InstrumentationRegistry.getInstrumentation().getTargetContext());
