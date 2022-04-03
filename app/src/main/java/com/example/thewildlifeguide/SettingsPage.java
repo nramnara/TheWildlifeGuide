@@ -61,7 +61,6 @@ public class SettingsPage extends AppCompatActivity {
         if (extras != null){
             prevAnimalName = extras.getString("fromInfo");
             prevSearchType = extras.getString("searchType");
-            prevSearchPage = extras.getString("prevSearchPage");
         }
 
         //check if prevAnimalName was assigned anything, if so then the previous page must be an animal info page, send the user back to that specific animal page
@@ -92,21 +91,23 @@ public class SettingsPage extends AppCompatActivity {
             Intent intent2 = new Intent(this,SearchPage.class);
             Intent intent3 = new Intent(this,ImageSearchPage.class);
 
-            if (prevSearchPage.length() > 0)
+            //System.out.println(MainActivity.settingsVariables.page);
+            switch (MainActivity.settingsVariables.page)
             {
-                if (prevSearchPage.equals("textSearch"))
-                {
+                case "textSearch":
+                    //System.out.println("textPage");
                     startActivity(intent2);
-                }
-                else
-                {
+                    break;
+                case "imageSearch":
+                    //System.out.println("imagePage");
                     startActivity(intent3);
-                }
+                    break;
+                default:
+                    //System.out.println("homePage");
+                    startActivity(intent);
             }
-            else
-            {
-                startActivity(intent);
-            }
+
+
         }
     }
 

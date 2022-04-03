@@ -1,7 +1,5 @@
 package com.example.thewildlifeguide;
 
-import android.widget.Switch;
-
 public class SettingsVariables {
 
     public boolean habitat = true;

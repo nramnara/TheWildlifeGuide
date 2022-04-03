@@ -46,6 +46,7 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
         setContentView(R.layout.activity_search_page);
 
 
+        MainActivity.settingsVariables.page = "textSearch";
         //-------------------------------------
 
         /* Hides the bar at the top of phone */
@@ -63,7 +64,6 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
         ArrayAdapter<CharSequence> dropdownAdapter = ArrayAdapter.createFromResource(this,R.array.numbers,android.R.layout.simple_spinner_item);
         dropdownAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(dropdownAdapter);
-
         spinner.setOnItemSelectedListener(this);
         //------------------------------------
         settingsButton = (Button) findViewById(R.id.SearchPageSettings_button);
@@ -126,6 +126,7 @@ public class SearchPage extends AppCompatActivity implements AdapterView.OnItemS
     }
     public void openSettingsPage(){
         Intent intent = new Intent(this,SettingsPage.class);
+        MainActivity.settingsVariables.page = "textSearch";
         startActivity(intent);
     }
 

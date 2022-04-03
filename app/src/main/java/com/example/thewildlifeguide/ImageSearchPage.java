@@ -55,6 +55,8 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_search_page);
 
+        MainActivity.settingsVariables.page = "imageSearch";
+
         //-------------------------------------
 
         /* Hides the bar at the top of phone */
@@ -151,6 +153,7 @@ public class ImageSearchPage extends AppCompatActivity implements AdapterView.On
     }
     public void openSettingsPage(){
         Intent intent = new Intent(this,SettingsPage.class);
+        MainActivity.settingsVariables.page = "imageSearch";
         startActivity(intent);
     }
 
